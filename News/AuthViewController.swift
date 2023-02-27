@@ -13,16 +13,12 @@ import FirebaseAuth
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var registerButton: UIButton!
-    
     @IBOutlet weak var signupButton: UIButton!
-    
     @IBOutlet weak var authstackView: UIStackView!
-    
     @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
@@ -58,7 +54,6 @@ class AuthViewController: UIViewController {
         }
     }
     
-    
     @IBAction func registerAction(_ sender: Any) {
         print("registerAction")
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -92,10 +87,18 @@ class AuthViewController: UIViewController {
     
     
     @IBAction func googleButton(_ sender: Any) {
-        
         print("Google")
-        
     }
+    
+    @IBAction func skitNow(_ sender: Any) {
+        // TODO: hacer algo antes de navegar al siguiente view controller
+        // navegar
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController_Id");
+        // self.present(viewController, animated: true);
+        navigationController?.pushViewController(viewController, animated: true);
+    }
+    
     
     private func showHome(result: AuthDataResult?, error: Error?, provider: ProviderType){
         if let result = result, error == nil {

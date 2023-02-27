@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B97EF7529AD27E8007C044D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */; };
 		5FA63002C62BAF68A077EB91 /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01EBC352907C3491D3B136C /* Pods_News_NewsUITests.framework */; };
 		65A3CB4A73B3C267F0432B0E /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C64F8AAAAB5EFC66F5CF0F /* Pods_NewsTests.framework */; };
 		87C6FB54B5C9AF922F21F489 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D4B3B26A8852F347D7C460 /* Pods_News.framework */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		00BDF656AEA506AD82A5AE57 /* Pods-News-NewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-NewsUITests.release.xcconfig"; path = "Target Support Files/Pods-News-NewsUITests/Pods-News-NewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5AA5BB8D46B2EDA363C60D01 /* Pods-News-NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-News-NewsUITests/Pods-News-NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		73D4B3B26A8852F347D7C460 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C64F8AAAAB5EFC66F5CF0F /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 				D8C2FFC1299AA3CF000D78FC /* LaunchScreen.storyboard */,
 				D8C2FFC4299AA3CF000D78FC /* Info.plist */,
 				D864E8CC29A586A9007DC4DE /* HomeViewController.xib */,
+				0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C2FFBB299AA3CA000D78FC /* AuthViewController.swift in Sources */,
+				0B97EF7529AD27E8007C044D /* WelcomeViewController.swift in Sources */,
 				D8C2FFB7299AA3CA000D78FC /* AppDelegate.swift in Sources */,
 				D8C2FFB9299AA3CA000D78FC /* SceneDelegate.swift in Sources */,
 				D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */,
