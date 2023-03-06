@@ -66,7 +66,6 @@ class HomeViewController: UIViewController {
             case .google:
                 // GIDSignIn.sharedInstance().signOut()
                 firebaseLogOut()
-            navigationController?.popViewController(animated: true)
             }
     }
     
@@ -74,6 +73,7 @@ class HomeViewController: UIViewController {
         
         do{
             try Auth.auth().signOut()
+            navigationController?.popViewController(animated: true)
         }
         catch{
             let alertController =  UIAlertController(title: "Error", message: "Ocurrio un error al salir de session", preferredStyle: .alert)
