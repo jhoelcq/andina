@@ -6,6 +6,7 @@ target 'News' do
   
   pod 'FirebaseCore'
   pod 'GoogleSignIn'
+  pod 'Alamofire'
   # pod 'GoogleSignIn', '~> 5.0.2'
 
 
