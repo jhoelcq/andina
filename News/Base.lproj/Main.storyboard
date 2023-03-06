@@ -36,7 +36,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XC-EH-x42">
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Registrar"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Registrar">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="registerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBf-QU-nfg"/>
                                                 </connections>
@@ -44,7 +46,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmJ-dH-MNf">
                                                 <rect key="frame" x="196" y="0.0" width="186" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Acceder"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Registrar Acceder">
+                                                    <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="signinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apr-HV-Zlg"/>
                                                 </connections>
@@ -65,7 +69,9 @@
                                 <rect key="frame" x="11" y="725" width="393" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Continuar sin crear cuenta"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Continuar sin crear cuenta">
+                                    <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="skitNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpK-Qr-vyQ"/>
                                 </connections>

@@ -2791,22 +2791,6 @@
 			};
 			name = Release;
 		};
-		118488D7FB5AB50E207E48303A509C58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57EE98D998289399407DC6CAB143A917 /* GoogleSignIn.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleSignIn";
-				IBSC_MODULE = GoogleSignIn;
-				INFOPLIST_FILE = "Target Support Files/GoogleSignIn/ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				PRODUCT_NAME = GoogleSignIn;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		120BBDBED872BC5EF5A79C75D4A3C2FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A29E05493B1EC1FC3756566DAEE45DDB /* GTMSessionFetcher.debug.xcconfig */;
@@ -2949,6 +2933,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		2C3CD76430F8FC61D077AB2E0381F480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57EE98D998289399407DC6CAB143A917 /* GoogleSignIn.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleSignIn";
+				IBSC_MODULE = GoogleSignIn;
+				INFOPLIST_FILE = "Target Support Files/GoogleSignIn/ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_NAME = GoogleSignIn;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		3116465253E5D2735E81E263946C254A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3195,22 +3196,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		697704B98A2327DF11FA8E65B66755B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD15ADAEF3BCDFCFBA8FC0D277C53EEE /* GoogleSignIn.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleSignIn";
-				IBSC_MODULE = GoogleSignIn;
-				INFOPLIST_FILE = "Target Support Files/GoogleSignIn/ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				PRODUCT_NAME = GoogleSignIn;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -3619,6 +3604,23 @@
 			};
 			name = Release;
 		};
+		EE63E6E16DB24ABC6298333F6350130A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD15ADAEF3BCDFCFBA8FC0D277C53EEE /* GoogleSignIn.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleSignIn";
+				IBSC_MODULE = GoogleSignIn;
+				INFOPLIST_FILE = "Target Support Files/GoogleSignIn/ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_NAME = GoogleSignIn;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		FD8A73AF73B5FB40EA148FC4DB8B43E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29FC600A59D341553180BE0EF4F0EB8F /* GTMAppAuth.release.xcconfig */;
@@ -3723,8 +3725,8 @@
 		A81182DC8314A1ED9D6B5BA4AE9E8677 /* Build configuration list for PBXNativeTarget "GoogleSignIn-GoogleSignIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				697704B98A2327DF11FA8E65B66755B3 /* Debug */,
-				118488D7FB5AB50E207E48303A509C58 /* Release */,
+				EE63E6E16DB24ABC6298333F6350130A /* Debug */,
+				2C3CD76430F8FC61D077AB2E0381F480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
