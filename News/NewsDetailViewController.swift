@@ -53,31 +53,6 @@ class NewsDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        struct NewsItem: Decodable {
-            let intNoticiaId: Int
-            let intSeccionId: Int
-            let vchTitulo: String
-            let vchBajada: String
-            let vchDescripcion: String
-            let txtContenido: String
-            let contenidoLimpio: String
-            let vchCreador: String
-            let vchNombreSeccion: String
-            let vchUrl: URL
-            let dtmFecha: Date
-            let vchHora: String
-            let arrFotografias: [Foto]
-        }
-
-        struct Foto: Decodable {
-            let intFotografiaId: Int
-            let intNoticiaId: Int
-            let vchLeyenda: String
-            let vchUrlImgPequena: URL
-            let vchUrlImgMediana: URL
-            let vchUrlImgWeb: URL
-        }
-        
         // Set title label's text
         titleLabel.text = newsItem.vchTitulo
         
