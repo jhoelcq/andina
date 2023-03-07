@@ -40,7 +40,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Inicio"
+        title = nil
+        self.navigationController?.isNavigationBarHidden = true
         navigationItem.setHidesBackButton(true, animated: false)
         
         emailText.text = self.email
