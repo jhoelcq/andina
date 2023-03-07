@@ -74,23 +74,16 @@ class AuthViewController: UIViewController {
         }
     }
     
-
     @IBAction func signinButton(_ sender: Any) {
         print("signinButton")
         
         if let email = emailTextField.text, let password = passwordTextField.text {
-            
             Auth.auth().signIn(withEmail: email, password: password){
                 (result, error) in
-                
                 self.showHome(result: result, error: error, provider: .basic)
-
             }
-            
         }
-        
     }
-    
     
     @IBAction func googleButton(_ sender: Any) {
         print("Google")
@@ -101,52 +94,39 @@ class AuthViewController: UIViewController {
             "deviceToken": ""
         ]
         
-        AF.request("http://104.196.199.198/api/Auth/LoginJwt",
-                   method: .post,
-                   parameters: parameters,
-                   encoding: JSONEncoding.default)
-            .responseJSON { response in
-                switch response.result {
-                case .success(let json):
-                    // La petición fue exitosa y el servidor respondió con un JSON
-                    print("JSON response: \(json)")
-                case .failure(let error):
-                    // La petición falló
-                    print("Error: \(error.localizedDescription)")
-                }
-            }
-        
-        /*
-        struct LoginPayload: Encodable {
-            let tokenId: String
-            let deviceToken: String
-        }
-        
-        struct LoginResponse: Decodable {
+        struct AuthResponse: Decodable {
             let fullname: String
             let email: String
             let picture: String
             let token: String
-                
-            enum CodingKeys: String, CodingKey {
-                case fullname
-                case email
-                case picture
-                case token
-            }
         }
         
-        let payload = LoginPayload(tokenId: "tokenId", deviceToken: "123456")
+        struct AuthError: Decodable {
+            let type: String
+            let title: String
+            let status: Int
+            let traceId: String
+        }
         
         AF.request("http://104.196.199.198/api/Auth/LoginJwt",
                    method: .post,
-                   parameters: payload,
-                   encoder: JSONParameterEncoder.default)
-        .responseDecodable(of: LoginResponse.self) { response in
-            guard let data = response.value else { return }
-            print("JSON response: \(data)")
+                   parameters: parameters).responseDecodable(of: AuthResponse.self) {
+            response in switch response.result {
+                case .success(let data):
+                    print("NAME:  \(data.fullname)")
+                case .failure(let error):
+                    // La petición falló
+                    print("Error response fail: \(error.localizedDescription)")
+                    if let data = response.data {
+                        do {
+                            let authError = try JSONDecoder().decode(AuthError.self, from: data)
+                            print("Auth error: \(authError.status)")
+                        } catch let error {
+                            print("Error decoding auth error: \(error.localizedDescription)")
+                        }
+                    }
+            }
         }
-         */
     }
     
     /*
@@ -155,19 +135,25 @@ class AuthViewController: UIViewController {
             // Signed in successfully
             // let tokenId = user.authentication.idToken
             if let tokenId = user.authentication.idToken {
-                struct Login: Encodable {
-                    let tokenId: String
-                    let deviceToken: String
-                }
-                
-                let payload = Login(tokenId: tokenId, deviceToken: "123456")
-                
-                AF.request("http://104.196.199.198/api/Auth/LoginJwt",
-                           method: .post,
-                           parameters: payload,
-                           encoder: JSONParameterEncoder.default).response {
-                    response in debugPrint(response)
-                }
+             let parameters: [String: Any] = [
+                 "tokenId": "eyJhbGciOiJSUzI1NiIA",
+                 "deviceToken": ""
+             ]
+             
+             AF.request("http://104.196.199.198/api/Auth/LoginJwt",
+                        method: .post,
+                        parameters: parameters,
+                        encoding: JSONEncoding.default)
+                 .responseJSON { response in
+                     switch response.result {
+                     case .success(let json):
+                         // La petición fue exitosa y el servidor
+                         print("JSON response: \(json)")
+                     case .failure(let error):
+                         // La petición falló
+                         print("Error: \(error.localizedDescription)")
+                     }
+                 }
                 
               print(tokenId)
             } else {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4041DE29B78437004E757F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4041DD29B78437004E757F /* Session.swift */; };
 		0B74145929B690C50072BE12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B74145829B690C50072BE12 /* GoogleService-Info.plist */; };
 		0B97EF7529AD27E8007C044D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */; };
 		4371F763305D671FF3E84D7F /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7092EE44A8CBBE691C1A7D88 /* Pods_News.framework */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B4041DD29B78437004E757F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0B74145829B690C50072BE12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		294EB24693EF8D0D8C445EA5 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				D8C2FFC4299AA3CF000D78FC /* Info.plist */,
 				D864E8CC29A586A9007DC4DE /* HomeViewController.xib */,
 				0B97EF7429AD27E8007C044D /* WelcomeViewController.swift */,
+				0B4041DD29B78437004E757F /* Session.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			files = (
 				D8C2FFBB299AA3CA000D78FC /* AuthViewController.swift in Sources */,
 				0B97EF7529AD27E8007C044D /* WelcomeViewController.swift in Sources */,
+				0B4041DE29B78437004E757F /* Session.swift in Sources */,
 				D8C2FFB7299AA3CA000D78FC /* AppDelegate.swift in Sources */,
 				D8C2FFB9299AA3CA000D78FC /* SceneDelegate.swift in Sources */,
 				D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */,
