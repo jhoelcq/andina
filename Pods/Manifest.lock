@@ -12,10 +12,14 @@ PODS:
     - GoogleUtilities/Environment
   - "GoogleUtilities/NSData+zlib (7.11.0)"
   - PromisesObjC (2.2.0)
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
 
 DEPENDENCIES:
   - Alamofire
   - FirebaseCore
+  - SDWebImage (= 5.15.5)
 
 SPEC REPOS:
   trunk:
@@ -24,6 +28,7 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - GoogleUtilities
     - PromisesObjC
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -31,7 +36,8 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: e463f41bb935cd049505bf7e9a5bdd7dcea90df6
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
 
-PODFILE CHECKSUM: 71dba013ba35bb763a18d6acec5b8e7699b5008b
+PODFILE CHECKSUM: 6f2b0e863ddbeb7af1962c2a9592268e2bae01b6
 
 COCOAPODS: 1.11.3
