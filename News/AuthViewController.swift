@@ -33,7 +33,7 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        title = "Autenticacion"
+        title = ""
         
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters:[ "message":"Integracion FB" ])
