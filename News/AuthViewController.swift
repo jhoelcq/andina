@@ -203,4 +203,7 @@ class AuthViewController: UIViewController {
         }
     }
     
+    @IBAction func goViewCategories(_ sender: Any) {
+        performSegue(withIdentifier: "viewCategories", sender: nil)
+    }
 }
