@@ -26,4 +26,7 @@ class CategoriesViewController: UIViewController {
     }
     */
 
+    @IBAction func goButtonAction(_ sender: Any) {
+        print("CATEGORIAS")
+    }
 }

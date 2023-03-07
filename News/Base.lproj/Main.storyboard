@@ -225,20 +225,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBigImageNotice" translatesAutoresizingMaskIntoConstraints="NO" id="Qd7-IE-lYg">
-                                <rect key="frame" x="43" y="397" width="328" height="160"/>
+                                <rect key="frame" x="43" y="195" width="328" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="anK-BO-OJQ"/>
-                                    <constraint firstAttribute="width" constant="328" id="eqw-s5-Fle"/>
+                                    <constraint firstAttribute="width" constant="328" id="9g8-b5-88F"/>
+                                    <constraint firstAttribute="height" constant="160" id="CKV-Md-K0z"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSF-Ah-YJh">
+                                <rect key="frame" x="170" y="383" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="KpB-5U-5Ir"/>
+                                    <constraint firstAttribute="height" constant="35" id="T0b-dX-uWf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="goButtonAction:" destination="A10-XG-eKF" eventType="touchUpInside" id="N3t-GY-TyQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UIT-EH-jWt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="4os-i8-XQt" secondAttribute="trailing" constant="155" id="4PY-bM-dts"/>
-                            <constraint firstItem="Qd7-IE-lYg" firstAttribute="centerY" secondItem="UIT-EH-jWt" secondAttribute="centerY" id="5Te-wn-YGm"/>
-                            <constraint firstItem="Qd7-IE-lYg" firstAttribute="centerX" secondItem="UIT-EH-jWt" secondAttribute="centerX" id="qEw-cP-i2W"/>
+                            <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="JSF-Ah-YJh" secondAttribute="trailing" constant="169" id="JVF-b7-GyA"/>
+                            <constraint firstItem="JSF-Ah-YJh" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" constant="170" id="Xkt-0l-7Z3"/>
+                            <constraint firstItem="JSF-Ah-YJh" firstAttribute="top" secondItem="Qd7-IE-lYg" secondAttribute="bottom" constant="28" id="YKI-Se-DV8"/>
+                            <constraint firstItem="Qd7-IE-lYg" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" constant="43" id="g0Z-Oz-6FM"/>
+                            <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="Qd7-IE-lYg" secondAttribute="trailing" constant="43" id="meK-6k-Qsa"/>
                             <constraint firstItem="4os-i8-XQt" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" constant="156" id="snZ-Pv-Wny"/>
+                            <constraint firstItem="Qd7-IE-lYg" firstAttribute="top" secondItem="4os-i8-XQt" secondAttribute="bottom" constant="57" id="t7T-0M-pH8"/>
                             <constraint firstItem="4os-i8-XQt" firstAttribute="top" secondItem="UIT-EH-jWt" secondAttribute="top" constant="25" id="xDx-sp-rir"/>
                         </constraints>
                     </view>
