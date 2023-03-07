@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
 
 class NewsDetailViewController: UIViewController {
 
@@ -154,19 +155,25 @@ class NewsDetailViewController: UIViewController {
     
     @IBAction func didTapLeftButton(_ sender: Any) {
         // Calcula el índice de la imagen anterior
-        // let newIndex = max(carouselPageControl.currentPage - 1, 0)
+        let newIndex = max(carouselPageControl.currentPage - 1, 0)
         // Actualiza el page control
-        // carouselPageControl.currentPage = newIndex
+        carouselPageControl.currentPage = newIndex
         // Actualiza la imagen en el carrusel de imágenes
+        let url = newsItem.arrFotografias[newIndex].vchUrlImgWeb
         // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgWeb
+        print("next \(url)")
+        carouselView.sd_setImage(with: url, completed: nil)
     }
     
     @IBAction func didTapRightButton(_ sender: Any) {
         // Calcula el índice de la siguiente imagen
-        // let newIndex = min(carouselPageControl.currentPage + 1, newsItem.arrFotografias.count - 1)
+        let newIndex = min(carouselPageControl.currentPage + 1, newsItem.arrFotografias.count - 1)
         // Actualiza el page control
-        // carouselPageControl.currentPage = newIndex
+        carouselPageControl.currentPage = newIndex
         // Actualiza la imagen en el carrusel de imágenes
+        let url = newsItem.arrFotografias[newIndex].vchUrlImgWeb
+        print("next \(url)")
+        carouselView.sd_setImage(with: url, completed: nil)
         // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgWeb
     }
     
