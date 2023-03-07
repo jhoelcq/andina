@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>329306487899-78dv0pfmn4k28a01td3aq3k9pfgtd4dg.apps.googleusercontent.com</string>
+	<string>172041609902-na2b3unnjn2ku6iostg5049pmbabd1cp.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.329306487899-78dv0pfmn4k28a01td3aq3k9pfgtd4dg</string>
+	<string>com.googleusercontent.apps.172041609902-na2b3unnjn2ku6iostg5049pmbabd1cp</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC1cJSC5fUoCtKo-CYsFzKShSChhO2LrDw</string>
+	<string>AIzaSyCAuPBL3UX73LcaYQq071-JFUvmRMQcFIo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>329306487899</string>
+	<string>172041609902</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Andina.News</string>
 	<key>PROJECT_ID</key>
-	<string>andina-c5a0c</string>
+	<string>andina-noticias</string>
 	<key>STORAGE_BUCKET</key>
-	<string>andina-c5a0c.appspot.com</string>
+	<string>andina-noticias.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:329306487899:ios:303c47c5d84392cb03137e</string>
+	<string>1:172041609902:ios:41042fecf44822253a033f</string>
 </dict>
 </plist>
