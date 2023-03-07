@@ -170,6 +170,11 @@ class AuthViewController: UIViewController {
     }
      */
     
+    @IBAction func goToSegueDemoView(_ sender: Any) {
+        performSegue(withIdentifier: "ViewDemo", sender: nil)
+    }
+    
+    
     @IBAction func skitNow(_ sender: Any) {
         // TODO: hacer algo antes de navegar al siguiente view controller
         // navegar
