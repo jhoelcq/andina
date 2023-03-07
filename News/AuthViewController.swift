@@ -9,6 +9,9 @@ import UIKit
 import FirebaseAnalytics
 import FirebaseAuth
 // import GoogleSignIn
+import Alamofire
+
+// GIDSignInDelegate
 
 class AuthViewController: UIViewController {
     
@@ -35,6 +38,9 @@ class AuthViewController: UIViewController {
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters:[ "message":"Integracion FB" ])
         
+        
+        // GIDSignIn.sharedInstance().clientID = "172041609902-na2b3unnjn2ku6iostg5049pmbabd1cp.apps.googleusercontent.com"
+        // GIDSignIn.sharedInstance().delegate = self
         
         // COMPROBACION DE INICIO DE SESION
         let defaults = UserDefaults.standard
@@ -88,7 +94,95 @@ class AuthViewController: UIViewController {
     
     @IBAction func googleButton(_ sender: Any) {
         print("Google")
+        // GIDSignIn.sharedInstance().signIn()
+       
+        let parameters: [String: Any] = [
+            "tokenId": "eyJhbGciOiJSUzI1NiIA",
+            "deviceToken": ""
+        ]
+        
+        AF.request("http://104.196.199.198/api/Auth/LoginJwt",
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let json):
+                    // La petición fue exitosa y el servidor respondió con un JSON
+                    print("JSON response: \(json)")
+                case .failure(let error):
+                    // La petición falló
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        
+        /*
+        struct LoginPayload: Encodable {
+            let tokenId: String
+            let deviceToken: String
+        }
+        
+        struct LoginResponse: Decodable {
+            let fullname: String
+            let email: String
+            let picture: String
+            let token: String
+                
+            enum CodingKeys: String, CodingKey {
+                case fullname
+                case email
+                case picture
+                case token
+            }
+        }
+        
+        let payload = LoginPayload(tokenId: "tokenId", deviceToken: "123456")
+        
+        AF.request("http://104.196.199.198/api/Auth/LoginJwt",
+                   method: .post,
+                   parameters: payload,
+                   encoder: JSONParameterEncoder.default)
+        .responseDecodable(of: LoginResponse.self) { response in
+            guard let data = response.value else { return }
+            print("JSON response: \(data)")
+        }
+         */
     }
+    
+    /*
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error == nil {
+            // Signed in successfully
+            // let tokenId = user.authentication.idToken
+            if let tokenId = user.authentication.idToken {
+                struct Login: Encodable {
+                    let tokenId: String
+                    let deviceToken: String
+                }
+                
+                let payload = Login(tokenId: tokenId, deviceToken: "123456")
+                
+                AF.request("http://104.196.199.198/api/Auth/LoginJwt",
+                           method: .post,
+                           parameters: payload,
+                           encoder: JSONParameterEncoder.default).response {
+                    response in debugPrint(response)
+                }
+                
+              print(tokenId)
+            } else {
+              print("Token ID is nil")
+            }
+            
+        } else {
+            // Error signing in
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // User disconnected
+    }
+     */
     
     @IBAction func skitNow(_ sender: Any) {
         // TODO: hacer algo antes de navegar al siguiente view controller

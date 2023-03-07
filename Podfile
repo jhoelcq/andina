@@ -5,11 +5,8 @@ target 'News' do
   # Pods for News
   
   pod 'FirebaseCore'
-  pod 'GoogleSignIn'
+  # pod 'GoogleSignIn', '5.0.2'
   pod 'Alamofire'
-  # pod 'GoogleSignIn', '~> 5.0.2'
-
-
   
   target 'NewsTests' do
     inherit! :search_paths

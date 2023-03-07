@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-import GoogleSignIn
+// import GoogleSignIn
 
 enum ProviderType : String {
     case basic
