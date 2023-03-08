@@ -52,11 +52,10 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var carouselPageControl: UIPageControl!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var captionImgLabel: UILabel!
     
+    @IBOutlet weak var groupContainer: UIStackView!
     
-    @IBOutlet var captionLabel: UIView!
-    
-    @IBOutlet var contentTextView: UIView!
     
     // MARK: - Lifecycle
     
@@ -127,10 +126,12 @@ class NewsDetailViewController: UIViewController {
         
 
         carouselLeftButton.translatesAutoresizingMaskIntoConstraints = false
+        carouselLeftButton.text = ""
         carouselLeftButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
 
         carouselRightButton.translatesAutoresizingMaskIntoConstraints = false
+        carouselRightButton.text = ""
         carouselRightButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
 
@@ -172,7 +173,22 @@ class NewsDetailViewController: UIViewController {
         dateFormatter.dateFormat = "dd 'de' MMMM, yyyy"
         dateLabel.text = "- \(dateFormatter.string(from: date))"
         
-        print(dateFormatter.string(from: date))
+        // Leyenda imagen
+        
+        captionImgLabel.text = "Delegación peruana encabezada por el ministro de Economía, Luis Miguel Castilla, en la foto oficial del road show de inversiones que se inició hoy en Abu Dhabi y Dubái. Foto: inPerú"
+        captionImgLabel.font = UIFont.systemFont(ofSize: 10)
+        captionImgLabel.textColor = .black
+        captionImgLabel.numberOfLines = 0
+        captionImgLabel.lineBreakMode = .byWordWrapping
+        captionImgLabel.sizeToFit()
+        captionImgLabel.frame.origin = CGPoint(x: 16, y: dateLabel.frame.maxY + 16)
+        captionImgLabel.frame.size.width = UIScreen.main.bounds.width - 16 * 2
+        
+        // group container
+        groupContainer.frame.origin = CGPoint(x: 16, y: captionImgLabel.frame.maxY + 16)
+        groupContainer.frame.size.width = view.frame.width - 32
+        groupContainer.backgroundColor = .gray
+        
         
         /*
         AF.request("http://104.196.199.198/api/EdpNoticias/460098").responseDecodable(of: NewsItem.self) {

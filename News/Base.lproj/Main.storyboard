@@ -274,15 +274,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="81m-6r-9n3">
-                                <rect key="frame" x="87" y="625" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-fo-vbe">
                                 <rect key="frame" x="334" y="258" width="60" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -312,26 +303,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-DG-0mS">
-                                <rect key="frame" x="48" y="458" width="87" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leyenda de la foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-R7-8Ee">
+                                <rect key="frame" x="20" y="438" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4S-m6-PHJ">
+                                <rect key="frame" x="20" y="483" width="364.5" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-V4-osV">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Compartir"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbH-1a-DLi">
+                                        <rect key="frame" x="100.5" y="0.0" width="264" height="50"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bPk-WQ-EOC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rll-Di-hdR"/>
                     <connections>
-                        <outlet property="captionLabel" destination="hRP-DG-0mS" id="Ivk-hR-lnd"/>
+                        <outlet property="captionImgLabel" destination="Dht-R7-8Ee" id="hqq-LU-Oeq"/>
                         <outlet property="carouselLeftButton" destination="SXD-M3-Mi6" id="aCa-MY-MVu"/>
                         <outlet property="carouselPageControl" destination="bU4-km-MVr" id="ddg-4h-G98"/>
                         <outlet property="carouselRightButton" destination="qJ9-fo-vbe" id="lEA-Wz-KTn"/>
                         <outlet property="carouselView" destination="3Vb-dh-USV" id="Oca-Eq-JP9"/>
-                        <outlet property="contentTextView" destination="adZ-HE-loW" id="ae9-hf-xHK"/>
                         <outlet property="dateLabel" destination="scF-14-xoD" id="tRs-BJ-6h1"/>
+                        <outlet property="groupContainer" destination="g4S-m6-PHJ" id="1QF-Zy-PdC"/>
                         <outlet property="timeLabel" destination="3Rt-Cr-hhr" id="ZFt-Ry-gAL"/>
                         <outlet property="titleLabel" destination="4OM-Tq-wYh" id="TzO-7H-Ood"/>
                     </connections>
@@ -404,9 +408,6 @@
         <namedColor name="LinkGrayBg">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
