@@ -30,9 +30,16 @@ class NewsDetailViewController: UIViewController {
             intFotografiaId: 210665,
             intNoticiaId: 460098,
             vchLeyenda: "Delegación peruana encabezada por el ministro de Economía, Luis Miguel Castilla, en la foto oficial del road show de inversiones que se inició hoy en Abu Dhabi y Dubái. Foto: inPerú",
-            vchUrlImgPequena: URL(string: "https://portal.andina.pe/EDPFotografia2/Thumbnail/2013/05/26/000210665P.jpg")!,
-            vchUrlImgMediana: URL(string: "https://portal.andina.pe/EDPFotografia2/Thumbnail/2013/05/26/000210665M.jpg")!,
-            vchUrlImgWeb: URL(string: "https://portal.andina.pe/EDPFotografia2/Thumbnail/2013/05/26/000210665W.jpg")!)]
+            vchUrlImgPequena: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816P.jpg")!,
+            vchUrlImgMediana: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg")!,
+            vchUrlImgWeb: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816W.jpg")!),
+        Foto(
+            intFotografiaId: 210665,
+            intNoticiaId: 460098,
+            vchLeyenda: "Delegación peruana.",
+            vchUrlImgPequena: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841P.jpg")!,
+            vchUrlImgMediana: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841M.jpg")!,
+            vchUrlImgWeb: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841W.jpg")!)]
     )
     
     // MARK: - Outlets∫
@@ -43,10 +50,15 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var carouselLeftButton: UIButton!
     @IBOutlet weak var carouselRightButton: UIButton!
     @IBOutlet weak var carouselPageControl: UIPageControl!
-    
-    @IBOutlet var dateLabel: UIView!
-    @IBOutlet var captionLabel: UIView!
-    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var captionImgLabel: UILabel!
+    @IBOutlet weak var groupContainer: UIStackView!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var groupRightButtons: UIStackView!
+    @IBOutlet weak var sizeFontButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var readingButton: UIButton!
     
     // MARK: - Lifecycle
     
@@ -86,6 +98,21 @@ class NewsDetailViewController: UIViewController {
             carouselView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
         ])
         
+        /*
+        let images = newsItem.arrFotografias.compactMap { foto in
+            print(foto.vchUrlImgMediana)
+            UIImage(contentsOfFile: foto.vchUrlImgMediana)
+        }*/
+         
+        let __url = URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg")
+                
+        carouselView.sd_setImage(with: __url, completed: { (image, error, cacheType, url) in
+            print("completed")
+            if let error = error {
+                print("Error al cargar la imagen: \(error.localizedDescription)")
+            }
+        })
+    
         carouselView.animationImages = []
         carouselView.animationDuration = Double(newsItem.arrFotografias.count) * 2.0
         carouselView.startAnimating()
@@ -103,11 +130,11 @@ class NewsDetailViewController: UIViewController {
 
         carouselLeftButton.translatesAutoresizingMaskIntoConstraints = false
         carouselLeftButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
+        // carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
 
         carouselRightButton.translatesAutoresizingMaskIntoConstraints = false
         carouselRightButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
+        // carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
 
 
         // Configura las restricciones de los botones
@@ -116,6 +143,81 @@ class NewsDetailViewController: UIViewController {
 
         carouselRightButton.centerYAnchor.constraint(equalTo: carouselView.centerYAnchor).isActive = true
         carouselRightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        
+        
+        // Hora
+        timeLabel.text = newsItem.vchHora
+        timeLabel.textAlignment = .center
+        timeLabel.font = UIFont.systemFont(ofSize: 10)
+        timeLabel.textColor = .red
+        timeLabel.numberOfLines = 0
+        timeLabel.sizeToFit()
+        timeLabel.frame.origin = CGPoint(x: 16, y: carouselView.frame.maxY + 16)
+        
+        // fecha
+        dateLabel.text = "-test-"
+        dateLabel.font = UIFont.systemFont(ofSize: 10)
+        dateLabel.textColor = .black
+        dateLabel.adjustsFontSizeToFitWidth = true
+        dateLabel.numberOfLines = 1
+        dateLabel.lineBreakMode = .byTruncatingTail
+        dateLabel.sizeToFit()
+        dateLabel.frame.origin = CGPoint(x: timeLabel.frame.maxX + 4, y: carouselView.frame.maxY + 16)
+        dateLabel.frame.size.width = UIScreen.main.bounds.width - dateLabel.frame.minX - 16
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        guard let date = dateFormatter.date(from: newsItem.dtmFecha) else {
+            return
+        }
+        
+        dateFormatter.dateFormat = "dd 'de' MMMM, yyyy"
+        dateLabel.text = "- \(dateFormatter.string(from: date))"
+        
+        // Leyenda imagen
+        captionImgLabel.text = "Delegación peruana encabezada por el ministro de Economía, Luis Miguel Castilla, en la foto oficial del road show de inversiones que se inició hoy en Abu Dhabi y Dubái. Foto: inPerú"
+        captionImgLabel.font = UIFont.systemFont(ofSize: 10)
+        captionImgLabel.textColor = .black
+        captionImgLabel.numberOfLines = 0
+        captionImgLabel.lineBreakMode = .byWordWrapping
+        captionImgLabel.sizeToFit()
+        captionImgLabel.frame.origin = CGPoint(x: 16, y: dateLabel.frame.maxY + 16)
+        captionImgLabel.frame.size.width = UIScreen.main.bounds.width - 16 * 2
+        
+        // group container
+        groupContainer.frame.size.width = view.frame.width - 32
+        groupContainer.translatesAutoresizingMaskIntoConstraints = false
+        groupContainer.axis = .horizontal
+        groupContainer.distribution = .equalSpacing
+        groupContainer.spacing = 16
+        
+        NSLayoutConstraint.activate([
+            groupContainer.topAnchor.constraint(equalTo: captionImgLabel.bottomAnchor, constant: 16),
+            groupContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            groupContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+        ])
+        
+        shareButton.setTitle("Compartir", for: .normal)
+        shareButton.setTitleColor(.black, for: .normal)
+        shareButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        
+        sizeFontButton.setTitle("aA", for: .normal)
+        sizeFontButton.setTitleColor(.black, for: .normal)
+        sizeFontButton.backgroundColor = .red
+        
+        saveButton.setTitle("Sv", for: .normal)
+        saveButton.setTitleColor(.black, for: .normal)
+        saveButton.backgroundColor = .red
+
+        readingButton.setTitle("Rd", for: .normal)
+        readingButton.setTitleColor(.black, for: .normal)
+        readingButton.backgroundColor = .red
+        
+        groupRightButtons.axis = .horizontal
+        groupRightButtons.distribution = .equalSpacing
+        groupRightButtons.spacing = 4
+        
+        
         
         /*
         AF.request("http://104.196.199.198/api/EdpNoticias/460098").responseDecodable(of: NewsItem.self) {
@@ -159,8 +261,8 @@ class NewsDetailViewController: UIViewController {
         // Actualiza el page control
         carouselPageControl.currentPage = newIndex
         // Actualiza la imagen en el carrusel de imágenes
-        let url = newsItem.arrFotografias[newIndex].vchUrlImgWeb
-        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgWeb
+        let url = newsItem.arrFotografias[newIndex].vchUrlImgMediana
+        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgMediana
         print("next \(url)")
         carouselView.sd_setImage(with: url, completed: nil)
     }
@@ -171,10 +273,10 @@ class NewsDetailViewController: UIViewController {
         // Actualiza el page control
         carouselPageControl.currentPage = newIndex
         // Actualiza la imagen en el carrusel de imágenes
-        let url = newsItem.arrFotografias[newIndex].vchUrlImgWeb
+        let url = newsItem.arrFotografias[newIndex].vchUrlImgMediana
         print("next \(url)")
         carouselView.sd_setImage(with: url, completed: nil)
-        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgWeb
+        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgMediana
     }
     
     
