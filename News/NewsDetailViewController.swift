@@ -53,9 +53,12 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionImgLabel: UILabel!
-    
     @IBOutlet weak var groupContainer: UIStackView!
-    
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var groupRightButtons: UIStackView!
+    @IBOutlet weak var sizeFontButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var readingButton: UIButton!
     
     // MARK: - Lifecycle
     
@@ -126,14 +129,12 @@ class NewsDetailViewController: UIViewController {
         
 
         carouselLeftButton.translatesAutoresizingMaskIntoConstraints = false
-        carouselLeftButton.text = ""
         carouselLeftButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
+        // carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
 
         carouselRightButton.translatesAutoresizingMaskIntoConstraints = false
-        carouselRightButton.text = ""
         carouselRightButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
+        // carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
 
 
         // Configura las restricciones de los botones
@@ -174,7 +175,6 @@ class NewsDetailViewController: UIViewController {
         dateLabel.text = "- \(dateFormatter.string(from: date))"
         
         // Leyenda imagen
-        
         captionImgLabel.text = "Delegación peruana encabezada por el ministro de Economía, Luis Miguel Castilla, en la foto oficial del road show de inversiones que se inició hoy en Abu Dhabi y Dubái. Foto: inPerú"
         captionImgLabel.font = UIFont.systemFont(ofSize: 10)
         captionImgLabel.textColor = .black
@@ -185,9 +185,38 @@ class NewsDetailViewController: UIViewController {
         captionImgLabel.frame.size.width = UIScreen.main.bounds.width - 16 * 2
         
         // group container
-        groupContainer.frame.origin = CGPoint(x: 16, y: captionImgLabel.frame.maxY + 16)
         groupContainer.frame.size.width = view.frame.width - 32
-        groupContainer.backgroundColor = .gray
+        groupContainer.translatesAutoresizingMaskIntoConstraints = false
+        groupContainer.axis = .horizontal
+        groupContainer.distribution = .equalSpacing
+        groupContainer.spacing = 16
+        
+        NSLayoutConstraint.activate([
+            groupContainer.topAnchor.constraint(equalTo: captionImgLabel.bottomAnchor, constant: 16),
+            groupContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            groupContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+        ])
+        
+        shareButton.setTitle("Compartir", for: .normal)
+        shareButton.setTitleColor(.black, for: .normal)
+        shareButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        
+        sizeFontButton.setTitle("aA", for: .normal)
+        sizeFontButton.setTitleColor(.black, for: .normal)
+        sizeFontButton.backgroundColor = .red
+        
+        saveButton.setTitle("Sv", for: .normal)
+        saveButton.setTitleColor(.black, for: .normal)
+        saveButton.backgroundColor = .red
+
+        readingButton.setTitle("Rd", for: .normal)
+        readingButton.setTitleColor(.black, for: .normal)
+        readingButton.backgroundColor = .red
+        
+        groupRightButtons.axis = .horizontal
+        groupRightButtons.distribution = .equalSpacing
+        groupRightButtons.spacing = 4
+        
         
         
         /*
