@@ -211,4 +211,10 @@ class AuthViewController: UIViewController {
     @IBAction func goViewCategories(_ sender: Any) {
         performSegue(withIdentifier: "viewCategories", sender: nil)
     }
+
+    
+    @IBAction func goViewLasted(_ sender: Any) {
+        performSegue(withIdentifier: "viewLastedNews", sender: nil)
+    }
+    
 }

@@ -19,6 +19,7 @@
 		D8278D3029B2716B004CB82E /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = D8278D2F29B2716B004CB82E /* Roboto */; };
 		D82A4EB729B8FA75002604ED /* CategoryMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */; };
 		D82A4EB829B8FA75002604ED /* CategoryMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */; };
+		D82A4EBA29B905F0002604ED /* LastedNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */; };
 		D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */; };
 		D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864E8CA29A53963007DC4DE /* HomeViewController.swift */; };
 		D864E8CD29A586AA007DC4DE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D864E8CC29A586A9007DC4DE /* HomeViewController.xib */; };
@@ -86,6 +87,7 @@
 		D8278D2F29B2716B004CB82E /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMainTableViewCell.swift; sourceTree = "<group>"; };
 		D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryMainTableViewCell.xib; sourceTree = "<group>"; };
+		D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastedNewsViewController.swift; sourceTree = "<group>"; };
 		D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		D864E8CA29A53963007DC4DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D864E8CC29A586A9007DC4DE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				D8FF47A029B8132500AC3D16 /* CategoryTableViewCell.xib */,
 				D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */,
 				D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */,
+				D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				0B97EF7529AD27E8007C044D /* WelcomeViewController.swift in Sources */,
 				D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */,
 				0B4041DE29B78437004E757F /* Session.swift in Sources */,
+				D82A4EBA29B905F0002604ED /* LastedNewsViewController.swift in Sources */,
 				0B4041ED29B7ED06004E757F /* DemoViewController.swift in Sources */,
 				0B4041E629B7AAE6004E757F /* NewsDetailViewController.swift in Sources */,
 				D8FF47A129B8132500AC3D16 /* CategoryTableViewCell.swift in Sources */,

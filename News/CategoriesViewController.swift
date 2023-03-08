@@ -104,8 +104,7 @@ extension CategoriesViewController: UITableViewDataSource {
 
     // Devuelve el número de filas en la sección especificada
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return dataCategory.count + 1
-        return dataCategory.count
+        return dataCategory.count + 1
     }
 
     // Devuelve la celda para la fila especificada
