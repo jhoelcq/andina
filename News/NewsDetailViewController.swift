@@ -19,7 +19,7 @@ class NewsDetailViewController: UIViewController {
         vchTitulo: "Empresarios de EAU conocen prioridad que tienen las inversiones en Perú",
         vchBajada: "",
         vchDescripcion: "",
-        txtContenido: "<p>Primer parrafo</p><p>Lorem ipsum...</p>",
+        txtContenido: "<div><br /></div><div>Asimismo, detalló que el año pasado se negociaron más de un millón 147,000 facturas, que permitió el financiamiento a 17,843 empresas en todo el país, de las cuales 15,019  (84% del total) fueron micro y pequeñas empresas (mypes)</div><div><br /></div><div>Los sectores económicos que más destacaron en este periodo son: Servicios, con un monto negociado de 8,784 millones de soles, beneficiando a 7,665 empresas (88.3% mypes); Comercio, favoreció a 4,479 empresas (78.5% mypes) negociando un monto de 9,306 millones de soles.</div><div><br /></div><div>Asimismo, Manufactura con 8,114 millones de soles en negociaciones, a favor de 3,537 empresas (80.3% mypes); mientras que, en otros sectores, se beneficiaron a 2,162 empresas (87.6% mypes), negociando 4,254 millones de soles.  </div><div> </div><div>En el 2022, participaron más de 100 operadores de factoring; de ellos: 11 son Operadores de Factoring supervisados por la Superintendencia de Banca, Seguros y AFP (SBS), principalmente bancos, que negociaron 881,602 facturas por 22,309 millones de soles.</div><div><br /></div><div>Además, se registran 90 operadores de Factoring no supervisados, los cuales ofrecen un servicio diferenciado al brindar financiamiento, incluso a las mype de baja clasificación o sin historial crediticio. </div><div><br /></div><div>Estos últimos, negociaron 265,451 facturas por 8,149 millones de soles, un 27% del mercado aproximadamente.   </div><div> </div><div>La negociación en Factoring en el 2022 registra un crecimiento importante del 36.4% en comparación con el año 2021. Asimismo, el monto negociado del 2022 representa el 3.3% con respecto al PBI del 2022.</div><div><strong><br /></strong></div><div><strong><br /></strong></div><h2><strong>Proyección</strong></h2><div><br /></div><div>En esa línea, se estima que el monto negociado de Factoring durante el 2023 superará los 32,000 millones de soles, permitiendo el financiamiento de más de 18,500 empresas, de las cuales el 84% serían micro y pequeña empresa.  </div><div> </div><div>Es importante mencionar que la décimo primera disposiciones complementarias finales de la Ley Nº 31538 permite al Banco de la Nación prestar servicios de Factoring a los proveedores mype del Estado.  </div><div> </div><div>Estos resultados del mercado de factoring y la medida normativa contribuyen significativamente al acceso a financiamiento de las mypes para su reactivación económica. </div><div> </div><div>Por su parte, el Registro Central de Valores y Liquidaciones Cavali, destacó que, durante el segundo semestre del 2022, se observó un incremento consecutivo en el registro de facturas a través de la plataforma digital Factrack, superando los 100,000 comprobantes mensuales. </div><div> </div><div>Asimismo, detalló que, solo en el mes de diciembre del 2022, se alcanzó un nuevo récord con más de 130,000 facturas anotadas, lo que demuestra que el factoring representa una muy buena opción para financiar las campañas comerciales de fin de año, justamente cuando las mype más lo necesitan.  </div><div><br /></div><div><strong>Más en Andina:</strong></div><div><br /></div><blockquote class=\"twitter-tweet\"><p lang=\"es\" dir=\"ltr\">Desembolsarán S/ 15 millones en créditos para negocios liderados por mujeres emprendedoras. <a href=\"https://t.co/hB87vEE75s\">https://t.co/hB87vEE75s</a> <a href=\"https://t.co/UsbLlh51D2\">pic.twitter.com/UsbLlh51D2</a></p>— Agencia Andina (@Agencia_Andina) <a href=\"https://twitter.com/Agencia_Andina/status/1622704294679007232?ref_src=twsrc%5Etfw\">February 6, 2023</a></blockquote><div><br /></div><div>(FIN) NDP / MDV </div>",
         contenidoLimpio: "",
         vchCreador: "gcanchari",
         vchNombreSeccion: "Economía",
@@ -45,7 +45,6 @@ class NewsDetailViewController: UIViewController {
     // MARK: - Outlets∫
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var carouselView: UIImageView!
     @IBOutlet weak var carouselLeftButton: UIButton!
     @IBOutlet weak var carouselRightButton: UIButton!
@@ -59,27 +58,21 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var sizeFontButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var readingButton: UIButton!
+    @IBOutlet weak var contentTextView: UITextView!
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         // Set title label's text
         titleLabel.text = newsItem.vchTitulo
-        
-        // Set title label's font and color
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.textColor = .black
-        
-        // Set title label's constraints
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
-        
-        // Set title label's number of lines and line break mode
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         
@@ -98,12 +91,6 @@ class NewsDetailViewController: UIViewController {
             carouselView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
         ])
         
-        /*
-        let images = newsItem.arrFotografias.compactMap { foto in
-            print(foto.vchUrlImgMediana)
-            UIImage(contentsOfFile: foto.vchUrlImgMediana)
-        }*/
-         
         let __url = URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg")
                 
         carouselView.sd_setImage(with: __url, completed: { (image, error, cacheType, url) in
@@ -128,14 +115,13 @@ class NewsDetailViewController: UIViewController {
         carouselPageControl.centerXAnchor.constraint(equalTo: carouselView.centerXAnchor).isActive = true
         
 
+        carouselLeftButton.setTitle("", for: .normal)
         carouselLeftButton.translatesAutoresizingMaskIntoConstraints = false
         carouselLeftButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        // carouselLeftButton.addTarget(self, action: #selector(didTapLeftButton), for: .touchUpInside)
 
+        carouselRightButton.setTitle("", for: .normal)
         carouselRightButton.translatesAutoresizingMaskIntoConstraints = false
         carouselRightButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        // carouselRightButton.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
-
 
         // Configura las restricciones de los botones
         carouselLeftButton.centerYAnchor.constraint(equalTo: carouselView.centerYAnchor).isActive = true
@@ -155,7 +141,7 @@ class NewsDetailViewController: UIViewController {
         timeLabel.frame.origin = CGPoint(x: 16, y: carouselView.frame.maxY + 16)
         
         // fecha
-        dateLabel.text = "-test-"
+        dateLabel.text = "-"
         dateLabel.font = UIFont.systemFont(ofSize: 10)
         dateLabel.textColor = .black
         dateLabel.adjustsFontSizeToFitWidth = true
@@ -199,26 +185,49 @@ class NewsDetailViewController: UIViewController {
         
         shareButton.setTitle("Compartir", for: .normal)
         shareButton.setTitleColor(.black, for: .normal)
+        shareButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         shareButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        shareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: -4)
         
-        sizeFontButton.setTitle("aA", for: .normal)
+        sizeFontButton.setTitle("", for: .normal)
         sizeFontButton.setTitleColor(.black, for: .normal)
-        sizeFontButton.backgroundColor = .red
+        sizeFontButton.setImage(UIImage(named: "iconSave"), for: .normal)
+        sizeFontButton.backgroundColor = .gray
         
-        saveButton.setTitle("Sv", for: .normal)
+        saveButton.setTitle("", for: .normal)
         saveButton.setTitleColor(.black, for: .normal)
-        saveButton.backgroundColor = .red
+        saveButton.setImage(UIImage(named: "iconSave"), for: .normal)
+        saveButton.backgroundColor = .gray
 
-        readingButton.setTitle("Rd", for: .normal)
+        readingButton.setTitle("", for: .normal)
         readingButton.setTitleColor(.black, for: .normal)
-        readingButton.backgroundColor = .red
+        readingButton.setImage(UIImage(named: "iconSave"), for: .normal)
+        readingButton.backgroundColor = .gray
         
         groupRightButtons.axis = .horizontal
         groupRightButtons.distribution = .equalSpacing
         groupRightButtons.spacing = 4
         
+        // content
+        contentTextView.translatesAutoresizingMaskIntoConstraints = false
+        contentTextView.backgroundColor = .clear
+        contentTextView.isEditable = false
+        if let htmlData = newsItem.txtContenido.data(using: .utf8) {
+            do {
+                let attributedString = try NSAttributedString(data: htmlData, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+                contentTextView.attributedText = attributedString
+            } catch {
+                print("Error al crear la cadena de atributos: \(error.localizedDescription)")
+            }
+        }
         
-        
+        NSLayoutConstraint.activate([
+            contentTextView.topAnchor.constraint(equalTo: groupContainer.bottomAnchor, constant: 16),
+            contentTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            contentTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            contentTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
         /*
         AF.request("http://104.196.199.198/api/EdpNoticias/460098").responseDecodable(of: NewsItem.self) {
             response in switch response.result {
@@ -279,5 +288,23 @@ class NewsDetailViewController: UIViewController {
         // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgMediana
     }
     
+    @IBAction func didTabShareButton(_ sender: Any) {
+        print("share")
+    }
+    
+    
+    @IBAction func didTabSizeFontButton(_ sender: Any) {
+        print("size font")
+    }
+    
+    
+    @IBAction func didTabSaveButton(_ sender: Any) {
+        print("save")
+    }
+    
+    
+    @IBAction func didTabReadingButton(_ sender: Any) {
+        print("reading")
+    }
     
 }

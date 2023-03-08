@@ -414,6 +414,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Compartir"/>
+                                        <connections>
+                                            <action selector="didTabShareButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="D6i-nR-taa"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbH-1a-DLi">
                                         <rect key="frame" x="183" y="0.0" width="183" height="34.5"/>
@@ -422,21 +425,39 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="aA"/>
+                                                <connections>
+                                                    <action selector="didTabSizeFontButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="ZD1-RW-QPw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srU-Qz-pez">
                                                 <rect key="frame" x="61" y="0.0" width="61" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                <connections>
+                                                    <action selector="didTabSaveButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="872-aG-BPd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4q-bo-6Yl">
                                                 <rect key="frame" x="122" y="0.0" width="61" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Mic"/>
+                                                <connections>
+                                                    <action selector="didTabReadingButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="Yl6-sr-1PE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-9e-XpN">
+                                <rect key="frame" x="20" y="544" width="366" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bPk-WQ-EOC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -448,6 +469,7 @@
                         <outlet property="carouselPageControl" destination="bU4-km-MVr" id="ddg-4h-G98"/>
                         <outlet property="carouselRightButton" destination="qJ9-fo-vbe" id="lEA-Wz-KTn"/>
                         <outlet property="carouselView" destination="3Vb-dh-USV" id="Oca-Eq-JP9"/>
+                        <outlet property="contentTextView" destination="3Nd-9e-XpN" id="uVd-4f-Kvs"/>
                         <outlet property="dateLabel" destination="scF-14-xoD" id="tRs-BJ-6h1"/>
                         <outlet property="groupContainer" destination="g4S-m6-PHJ" id="1QF-Zy-PdC"/>
                         <outlet property="groupRightButtons" destination="kbH-1a-DLi" id="pWd-Nd-JXT"/>
