@@ -69,7 +69,9 @@ class CategoriesViewController: UIViewController {
         // tableViewCategories.register(UITableViewCell.self, forCellReuseIdentifier: "cellCategories")
         
         tableViewCategories.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCategories")
-            
+        
+        tableViewCategories.register(UINib(nibName: "CategoryMainTableViewCell", bundle: nil), forCellReuseIdentifier: "cellMainCategories")
+         
     }
     
 
@@ -88,6 +90,11 @@ class CategoriesViewController: UIViewController {
     }
 }
 
+enum CellType {
+    case typeOne
+    case typeTwo
+}
+
 extension CategoriesViewController: UITableViewDataSource {
 
     // Devuelve el número de secciones en la vista de tabla (opcional, por defecto es 1)
@@ -97,20 +104,32 @@ extension CategoriesViewController: UITableViewDataSource {
 
     // Devuelve el número de filas en la sección especificada
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return dataCategory.count + 1
         return dataCategory.count
     }
 
     // Devuelve la celda para la fila especificada
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataCell = dataCategory[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellCategories", for: indexPath) as? CategoryTableViewCell
         
-        cell?.customTitle?.text = dataCell.title
-        cell?.customImage?.image = UIImage(named: dataCell.image)
-        cell?.customCategory?.text = dataCell.name
-        cell?.customTime?.text = dataCell.time
         
-        return cell!
+        let cellType: CellType = indexPath.row == 0 ? .typeOne : .typeTwo
+        if cellType == .typeOne {
+            let dataCell = dataCategory[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellMainCategories", for: indexPath) as? CategoryMainTableViewCell
+            return cell!
+        }else{
+         
+            let dataCell = dataCategory[indexPath.row - 1]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellCategories", for: indexPath) as? CategoryTableViewCell
+            
+            cell?.customTitle?.text = dataCell.title
+            cell?.customImage?.image = UIImage(named: dataCell.image)
+            cell?.customCategory?.text = dataCell.name
+            cell?.customTime?.text = dataCell.time
+            
+            return cell!
+        }
+        
     }
     
 }

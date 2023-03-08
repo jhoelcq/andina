@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="KGk-i7-Jjw" customClass="CategoryMainTableViewCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBigImageNotice" translatesAutoresizingMaskIntoConstraints="NO" id="PKc-uo-ZOg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoy se vive una fiesta interminable en Cajamarca" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh1-LG-GZb">
+                        <rect key="frame" x="15" y="103" width="251" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="251" id="HHt-GJ-wbE"/>
+                            <constraint firstAttribute="height" constant="47" id="fIb-3H-njO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhm-rg-OtN">
+                        <rect key="frame" x="298" y="126" width="11" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="hyb-Xe-1SV"/>
+                            <constraint firstAttribute="height" constant="24" id="nh0-EU-YBu"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="">
+                            <backgroundConfiguration key="background" image="iconSave" imageContentMode="scaleAspectFit"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PKc-uo-ZOg" secondAttribute="trailing" id="5yG-rJ-Hjk"/>
+                    <constraint firstItem="PKc-uo-ZOg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6Sn-Tp-VEm"/>
+                    <constraint firstItem="zh1-LG-GZb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8Ug-Oc-mO0"/>
+                    <constraint firstAttribute="bottom" secondItem="nhm-rg-OtN" secondAttribute="bottom" constant="10" id="AAy-Qc-ea8"/>
+                    <constraint firstAttribute="bottom" secondItem="PKc-uo-ZOg" secondAttribute="bottom" id="GNd-Dn-26z"/>
+                    <constraint firstItem="PKc-uo-ZOg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HlR-Hy-QgQ"/>
+                    <constraint firstAttribute="bottom" secondItem="zh1-LG-GZb" secondAttribute="bottom" constant="10" id="fRf-0L-N0b"/>
+                    <constraint firstAttribute="trailing" secondItem="nhm-rg-OtN" secondAttribute="trailing" constant="11" id="npL-2G-Fql"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="129.7709923664122" y="29.577464788732396"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultBigImageNotice" width="328" height="160"/>
+        <image name="iconSave" width="17" height="23"/>
+    </resources>
+</document>
