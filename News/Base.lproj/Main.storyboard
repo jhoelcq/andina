@@ -306,15 +306,15 @@
                                     <constraint firstAttribute="trailing" secondItem="BkS-ey-EcM" secondAttribute="trailing" constant="15" id="srR-da-Jwc"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ehs-2D-yx4">
-                                <rect key="frame" x="0.0" y="342" width="414" height="520"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ehs-2D-yx4">
+                                <rect key="frame" x="15" y="342" width="384" height="520"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellCategories" id="UqP-tJ-vID">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UqP-tJ-vID" id="csq-ov-XKR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -324,15 +324,15 @@
                         <viewLayoutGuide key="safeArea" id="UIT-EH-jWt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ehs-2D-yx4" firstAttribute="trailing" secondItem="UIT-EH-jWt" secondAttribute="trailing" id="0DA-Md-ZQV"/>
                             <constraint firstItem="tg3-Vm-7qM" firstAttribute="top" secondItem="UIT-EH-jWt" secondAttribute="top" id="EMw-KL-Xkp"/>
-                            <constraint firstItem="ehs-2D-yx4" firstAttribute="top" secondItem="jAa-og-9yL" secondAttribute="bottom" constant="20" id="Gwp-mz-wbQ"/>
-                            <constraint firstItem="ehs-2D-yx4" firstAttribute="bottom" secondItem="UIT-EH-jWt" secondAttribute="bottom" id="QSW-G0-aG1"/>
                             <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="tg3-Vm-7qM" secondAttribute="trailing" id="YIz-48-PGr"/>
+                            <constraint firstItem="UIT-EH-jWt" firstAttribute="bottom" secondItem="ehs-2D-yx4" secondAttribute="bottom" id="ae7-fI-cD2"/>
                             <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="jAa-og-9yL" secondAttribute="trailing" constant="43" id="cRf-rG-1z3"/>
+                            <constraint firstItem="ehs-2D-yx4" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" constant="15" id="cfE-i8-AbO"/>
                             <constraint firstItem="jAa-og-9yL" firstAttribute="top" secondItem="tg3-Vm-7qM" secondAttribute="bottom" constant="20" id="cuZ-Zb-re3"/>
-                            <constraint firstItem="ehs-2D-yx4" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" id="gfz-ic-jW6"/>
+                            <constraint firstItem="UIT-EH-jWt" firstAttribute="trailing" secondItem="ehs-2D-yx4" secondAttribute="trailing" constant="15" id="lCJ-JW-s41"/>
                             <constraint firstItem="jAa-og-9yL" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" constant="43" id="nvA-BO-S8Y"/>
+                            <constraint firstItem="ehs-2D-yx4" firstAttribute="top" secondItem="jAa-og-9yL" secondAttribute="bottom" constant="20" id="q8S-Rd-Vy8"/>
                             <constraint firstItem="tg3-Vm-7qM" firstAttribute="leading" secondItem="UIT-EH-jWt" secondAttribute="leading" id="zol-jV-rPp"/>
                         </constraints>
                     </view>
@@ -564,9 +564,6 @@
         <namedColor name="SplashscreenBG">
             <color red="0.92941176470588238" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
