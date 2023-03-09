@@ -61,6 +61,8 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var readingButton: UIButton!
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var titleRelatedNewsView: UIView!
+    @IBOutlet weak var containerRelatedNewsView: UIView!
+    @IBOutlet weak var relatedNewsTableView: UITableView!
     
     // MARK: - Lifecycle∫
     
@@ -260,16 +262,34 @@ class NewsDetailViewController: UIViewController {
         ])
         
         titleRelatedNewsView.translatesAutoresizingMaskIntoConstraints = false
-
-        // Establece las restricciones de diseño para la nueva UIView en relación a bodyTextView
+        
         NSLayoutConstraint.activate([
             titleRelatedNewsView.topAnchor.constraint(equalTo: bodyTextView.bottomAnchor, constant: 16),
             titleRelatedNewsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             titleRelatedNewsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             titleRelatedNewsView.heightAnchor.constraint(equalToConstant: 20),
-            titleRelatedNewsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
+            // titleRelatedNewsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
         ])
+        
+        containerRelatedNewsView.translatesAutoresizingMaskIntoConstraints = false
 
+        NSLayoutConstraint.activate([
+            containerRelatedNewsView.topAnchor.constraint(equalTo: titleRelatedNewsView.bottomAnchor, constant: 16),
+            containerRelatedNewsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            containerRelatedNewsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            containerRelatedNewsView.heightAnchor.constraint(equalToConstant: 100),
+            containerRelatedNewsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
+        ])
+        
+        relatedNewsTableView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            relatedNewsTableView.topAnchor.constraint(equalTo: containerRelatedNewsView.topAnchor, constant: 0),
+            relatedNewsTableView.leadingAnchor.constraint(equalTo: containerRelatedNewsView.leadingAnchor, constant: 0),
+            relatedNewsTableView.trailingAnchor.constraint(equalTo: containerRelatedNewsView.trailingAnchor, constant: 0),
+            relatedNewsTableView.bottomAnchor.constraint(equalTo: containerRelatedNewsView.bottomAnchor, constant: 0),
+        ])
+        
         /*
         AF.request("http://104.196.199.198/api/EdpNoticias/460098").responseDecodable(of: NewsItem.self) {
             response in switch response.result {
