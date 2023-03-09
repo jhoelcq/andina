@@ -89,7 +89,7 @@ class NewsDetailViewController: UIViewController {
         )
     ]
     
-    // MARK: - Outlets∫
+    // MARK: - Outlets
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
