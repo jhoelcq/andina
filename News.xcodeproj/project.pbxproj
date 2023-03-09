@@ -20,6 +20,10 @@
 		D82A4EB729B8FA75002604ED /* CategoryMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */; };
 		D82A4EB829B8FA75002604ED /* CategoryMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */; };
 		D82A4EBA29B905F0002604ED /* LastedNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */; };
+		D82A4EC629B93995002604ED /* LastedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EC429B93995002604ED /* LastedTableViewCell.swift */; };
+		D82A4EC729B93995002604ED /* LastedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A4EC529B93995002604ED /* LastedTableViewCell.xib */; };
+		D82A4ECA29B939AC002604ED /* LastedMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A4EC829B939AC002604ED /* LastedMainTableViewCell.swift */; };
+		D82A4ECB29B939AC002604ED /* LastedMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A4EC929B939AC002604ED /* LastedMainTableViewCell.xib */; };
 		D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */; };
 		D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864E8CA29A53963007DC4DE /* HomeViewController.swift */; };
 		D864E8CD29A586AA007DC4DE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D864E8CC29A586A9007DC4DE /* HomeViewController.xib */; };
@@ -88,6 +92,10 @@
 		D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMainTableViewCell.swift; sourceTree = "<group>"; };
 		D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryMainTableViewCell.xib; sourceTree = "<group>"; };
 		D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastedNewsViewController.swift; sourceTree = "<group>"; };
+		D82A4EC429B93995002604ED /* LastedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastedTableViewCell.swift; sourceTree = "<group>"; };
+		D82A4EC529B93995002604ED /* LastedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastedTableViewCell.xib; sourceTree = "<group>"; };
+		D82A4EC829B939AC002604ED /* LastedMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastedMainTableViewCell.swift; sourceTree = "<group>"; };
+		D82A4EC929B939AC002604ED /* LastedMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastedMainTableViewCell.xib; sourceTree = "<group>"; };
 		D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		D864E8CA29A53963007DC4DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D864E8CC29A586A9007DC4DE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -231,6 +239,10 @@
 				D82A4EB529B8FA75002604ED /* CategoryMainTableViewCell.swift */,
 				D82A4EB629B8FA75002604ED /* CategoryMainTableViewCell.xib */,
 				D82A4EB929B905F0002604ED /* LastedNewsViewController.swift */,
+				D82A4EC429B93995002604ED /* LastedTableViewCell.swift */,
+				D82A4EC529B93995002604ED /* LastedTableViewCell.xib */,
+				D82A4EC829B939AC002604ED /* LastedMainTableViewCell.swift */,
+				D82A4EC929B939AC002604ED /* LastedMainTableViewCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -382,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82A4EC729B93995002604ED /* LastedTableViewCell.xib in Resources */,
 				D8C2FFC3299AA3CF000D78FC /* LaunchScreen.storyboard in Resources */,
 				D8FF47A229B8132500AC3D16 /* CategoryTableViewCell.xib in Resources */,
 				D864E8CD29A586AA007DC4DE /* HomeViewController.xib in Resources */,
@@ -390,6 +403,7 @@
 				D8C2FFBE299AA3CA000D78FC /* Main.storyboard in Resources */,
 				D8278D3029B2716B004CB82E /* Roboto in Resources */,
 				0B4041EB29B7E81D004E757F /* GoogleService-Info.plist in Resources */,
+				D82A4ECB29B939AC002604ED /* LastedMainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,11 +538,13 @@
 				D82A4EBA29B905F0002604ED /* LastedNewsViewController.swift in Sources */,
 				0B4041ED29B7ED06004E757F /* DemoViewController.swift in Sources */,
 				0B4041E629B7AAE6004E757F /* NewsDetailViewController.swift in Sources */,
+				D82A4ECA29B939AC002604ED /* LastedMainTableViewCell.swift in Sources */,
 				D8FF47A129B8132500AC3D16 /* CategoryTableViewCell.swift in Sources */,
 				D8C2FFB7299AA3CA000D78FC /* AppDelegate.swift in Sources */,
 				D82A4EB729B8FA75002604ED /* CategoryMainTableViewCell.swift in Sources */,
 				0B4041E929B7C563004E757F /* NewsItem.swift in Sources */,
 				D8C2FFB9299AA3CA000D78FC /* SceneDelegate.swift in Sources */,
+				D82A4EC629B93995002604ED /* LastedTableViewCell.swift in Sources */,
 				D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -371,22 +371,22 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Aea-5G-aYl">
-                                <rect key="frame" x="0.0" y="142" width="414" height="720"/>
+                                <rect key="frame" x="15" y="142" width="384" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TK8-Cn-I1B">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellMainLasted" id="TK8-Cn-I1B">
+                                        <rect key="frame" x="0.0" y="50" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TK8-Cn-I1B" id="3mt-OO-5BW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ole-7r-bNa">
-                                        <rect key="frame" x="0.0" y="93.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLasted" id="ole-7r-bNa">
+                                        <rect key="frame" x="0.0" y="93.5" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ole-7r-bNa" id="2Ql-qD-Dw4">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -396,20 +396,23 @@
                         <viewLayoutGuide key="safeArea" id="1IE-Hg-X9V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1IE-Hg-X9V" firstAttribute="bottom" secondItem="Aea-5G-aYl" secondAttribute="bottom" id="0PQ-fE-OnH"/>
-                            <constraint firstItem="Aea-5G-aYl" firstAttribute="top" secondItem="BN0-rh-ova" secondAttribute="bottom" id="0V5-Bt-gHc"/>
                             <constraint firstItem="BN0-rh-ova" firstAttribute="trailing" secondItem="1IE-Hg-X9V" secondAttribute="trailing" id="B9h-BZ-RDj"/>
                             <constraint firstItem="BN0-rh-ova" firstAttribute="leading" secondItem="1IE-Hg-X9V" secondAttribute="leading" id="FSx-h7-uNn"/>
-                            <constraint firstItem="1IE-Hg-X9V" firstAttribute="trailing" secondItem="Aea-5G-aYl" secondAttribute="trailing" id="Fs9-Ld-pR6"/>
                             <constraint firstItem="BN0-rh-ova" firstAttribute="top" secondItem="1IE-Hg-X9V" secondAttribute="top" id="HWp-cg-zF1"/>
-                            <constraint firstItem="Aea-5G-aYl" firstAttribute="leading" secondItem="1IE-Hg-X9V" secondAttribute="leading" id="uIE-4J-0x9"/>
+                            <constraint firstItem="1IE-Hg-X9V" firstAttribute="bottom" secondItem="Aea-5G-aYl" secondAttribute="bottom" id="KdG-tI-YhV"/>
+                            <constraint firstItem="Aea-5G-aYl" firstAttribute="top" secondItem="BN0-rh-ova" secondAttribute="bottom" id="Tpr-KY-6tp"/>
+                            <constraint firstItem="Aea-5G-aYl" firstAttribute="leading" secondItem="1IE-Hg-X9V" secondAttribute="leading" constant="15" id="YPN-WE-Aym"/>
+                            <constraint firstItem="1IE-Hg-X9V" firstAttribute="trailing" secondItem="Aea-5G-aYl" secondAttribute="trailing" constant="15" id="hXI-eN-oBV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iXh-hW-Cb4"/>
+                    <connections>
+                        <outlet property="tableViewLasted" destination="Aea-5G-aYl" id="UTQ-GW-mRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mp-lm-uoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="706"/>
+            <point key="canvasLocation" x="2118.840579710145" y="705.80357142857144"/>
         </scene>
         <!--News Detail View Controller-->
         <scene sceneID="LQ6-ta-AAV">

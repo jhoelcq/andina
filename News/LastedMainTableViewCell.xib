@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="KGk-i7-Jjw" customClass="LastedMainTableViewCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Últimas noticias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHA-QM-YN2">
+                        <rect key="frame" x="87" y="14" width="146" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="146" id="3ff-I8-SOG"/>
+                            <constraint firstAttribute="height" constant="29" id="iVt-1W-thW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0M-i4-QqW">
+                        <rect key="frame" x="0.0" y="55" width="320" height="160"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="1Pk-H5-3bM"/>
+                            <constraint firstAttribute="width" constant="320" id="S75-i5-xuS"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBigImageNotice" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-Mx-i30">
+                        <rect key="frame" x="0.0" y="55" width="320" height="160"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conoce el cronograma 2023 de pagos de sueldos y pensiones en el Estado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-eH-XVU">
+                        <rect key="frame" x="9" y="130" width="243" height="74"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="ruz-Uq-VeO"/>
+                            <constraint firstAttribute="width" constant="243" id="sDF-vb-CbX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asf-nF-bxv">
+                        <rect key="frame" x="292" y="183" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="FY8-GC-3Pf"/>
+                            <constraint firstAttribute="height" constant="15" id="ZPh-Cf-Z6E"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="">
+                            <backgroundConfiguration key="background" image="iconSave" imageContentMode="scaleAspectFit"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="N3L-eH-XVU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="21c-kA-iJh"/>
+                    <constraint firstItem="KHA-QM-YN2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="7FM-q8-cZ9"/>
+                    <constraint firstAttribute="trailing" secondItem="asf-nF-bxv" secondAttribute="trailing" constant="13" id="BTy-ce-n7R"/>
+                    <constraint firstAttribute="trailing" secondItem="EtS-Mx-i30" secondAttribute="trailing" id="GOY-vz-5N6"/>
+                    <constraint firstItem="KHA-QM-YN2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="IaV-s7-NIT"/>
+                    <constraint firstItem="E0M-i4-QqW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lpj-vk-Ypy"/>
+                    <constraint firstAttribute="bottom" secondItem="N3L-eH-XVU" secondAttribute="bottom" constant="11" id="SpS-xp-6LY"/>
+                    <constraint firstAttribute="bottom" secondItem="E0M-i4-QqW" secondAttribute="bottom" id="l4I-qd-qWS"/>
+                    <constraint firstItem="EtS-Mx-i30" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lZJ-2e-k1Z"/>
+                    <constraint firstAttribute="bottom" secondItem="EtS-Mx-i30" secondAttribute="bottom" id="lgU-Ri-eOz"/>
+                    <constraint firstAttribute="bottom" secondItem="asf-nF-bxv" secondAttribute="bottom" constant="17" id="oWN-OB-cfK"/>
+                    <constraint firstItem="asf-nF-bxv" firstAttribute="leading" secondItem="N3L-eH-XVU" secondAttribute="trailing" constant="40" id="pfE-XC-aMH"/>
+                    <constraint firstAttribute="trailing" secondItem="E0M-i4-QqW" secondAttribute="trailing" id="wHm-as-kwZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="82.44274809160305" y="37.676056338028168"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultBigImageNotice" width="328" height="160"/>
+        <image name="iconSave" width="17" height="23"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
