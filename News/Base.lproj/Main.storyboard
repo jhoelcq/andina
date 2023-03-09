@@ -181,7 +181,13 @@
                             <constraint firstItem="P2r-Go-MBs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="lqz-gp-vrl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Q5-0c-k7q"/>
+                    <navigationItem key="navigationItem" id="9Q5-0c-k7q">
+                        <barButtonItem key="leftBarButtonItem" title="MENU" id="ho2-rn-NwH">
+                            <connections>
+                                <action selector="goMenu:" destination="BYZ-38-t0r" id="Kev-5c-ep1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authstackView" destination="3Fi-XI-zA9" id="c2r-yX-eNz"/>
                         <outlet property="emailTextField" destination="xZr-rj-gAC" id="1pi-HO-Ogw"/>
@@ -190,44 +196,12 @@
                         <outlet property="registerButton" destination="7XC-EH-x42" id="Kvy-bE-vOf"/>
                         <outlet property="skipButton" destination="FJU-57-Wdx" id="hDG-FT-F7b"/>
                         <segue destination="A10-XG-eKF" kind="show" identifier="viewCategories" id="qVu-fX-57w"/>
-                        <segue destination="ofX-4E-erP" kind="show" identifier="ViewDemo" id="hhR-ua-OBM"/>
                         <segue destination="hZr-mu-URv" kind="show" identifier="viewLastedNews" id="GBu-Gg-yUd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333.33333333333337" y="-32.8125"/>
-        </scene>
-        <!--Welcome View Controller-->
-        <scene sceneID="nwl-6D-gS9">
-            <objects>
-                <viewController storyboardIdentifier="WelcomeViewController_Id" id="udx-dW-vn8" customClass="WelcomeViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Et4-MS-EBn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TE DAMOS LA BIENVENIDA A LA AGENCIA DE NOTICAS ANDINA" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEn-8q-6ht">
-                                <rect key="frame" x="20" y="99" width="374" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecciona tus temas favoritos y los mostraremos primeros en tu feed:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na3-ps-4yx">
-                                <rect key="frame" x="20" y="220" width="374" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qss-Je-aJU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JJ5-0R-EKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1229" y="-492"/>
+            <point key="canvasLocation" x="333" y="-654"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="Ou4-mh-OxR">
@@ -692,40 +666,6 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="765.40178571428567"/>
         </scene>
-        <!--Demo View Controller-->
-        <scene sceneID="MHj-Ar-sVe">
-            <objects>
-                <viewController id="ofX-4E-erP" customClass="DemoViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fym-aX-Kw9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEMO VIEW CONTROLLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNN-O1-Utl">
-                                <rect key="frame" x="103" y="401" width="208" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLB-OT-Mpn">
-                                <rect key="frame" x="170" y="541" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="testOnClic:" destination="ofX-4E-erP" eventType="touchUpInside" id="HT8-61-QsI"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dzG-FN-kTg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vge-or-tDy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ab-PU-oCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-612" y="767"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">
             <objects>
@@ -740,7 +680,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo5-uS-9ul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-611" y="-32"/>
+            <point key="canvasLocation" x="-714" y="-654"/>
         </scene>
     </scenes>
     <resources>
