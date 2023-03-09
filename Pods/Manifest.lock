@@ -15,11 +15,13 @@ PODS:
   - SDWebImage (5.15.5):
     - SDWebImage/Core (= 5.15.5)
   - SDWebImage/Core (5.15.5)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - Alamofire
   - FirebaseCore
   - SDWebImage (= 5.15.5)
+  - SideMenu (= 6.5.0)
 
 SPEC REPOS:
   trunk:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - GoogleUtilities
     - PromisesObjC
     - SDWebImage
+    - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -37,7 +40,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 6f2b0e863ddbeb7af1962c2a9592268e2bae01b6
+PODFILE CHECKSUM: c8d7c00a4dc1db37976877f3abcde549fb7a29ea
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
