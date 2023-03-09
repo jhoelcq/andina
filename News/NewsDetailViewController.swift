@@ -156,14 +156,9 @@ class NewsDetailViewController: UIViewController {
             carouselView.heightAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.5)
         ])
         
-        let __url = URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg")
-                
-        carouselView.sd_setImage(with: __url, completed: { (image, error, cacheType, url) in
-            print("completed")
-            if let error = error {
-                print("Error al cargar la imagen: \(error.localizedDescription)")
-            }
-        })
+        if let imageUrlString = newsItem.arrFotografias.first?.vchUrlImgWeb, let imageUrl = URL(string: imageUrlString) {
+            carouselView.sd_setImage(with: imageUrl, completed: nil)
+        }
     
         carouselView.animationImages = []
         carouselView.animationDuration = Double(newsItem.arrFotografias.count) * 2.0
@@ -287,14 +282,12 @@ class NewsDetailViewController: UIViewController {
                 let matches = regex.matches(in: attributedString.string, options: [], range: NSRange(location: 0, length: attributedString.length))
                 
                 // print("matches > \(matches)")
-                
                 for match in matches {
                     let range = match.range
                     attributedString.addAttribute(.font, value: titleFont, range: range)
                 }
                 
                 // print("parseHTML > \(attributedString)")
-                
                 bodyTextView.attributedText = attributedString
             } catch {
                 print("Error al crear la cadena de atributos: \(error.localizedDescription)")
