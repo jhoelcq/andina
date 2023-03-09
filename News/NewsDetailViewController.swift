@@ -23,24 +23,71 @@ class NewsDetailViewController: UIViewController {
         contenidoLimpio: "",
         vchCreador: "gcanchari",
         vchNombreSeccion: "Economía",
-        vchUrl: URL(string: "https://andina.pe/agencia/noticia-empresarios-eau-conocen-prioridad-tienen-las-inversiones-peru-460098.aspx")!,
+        vchUrl: "https://andina.pe/agencia/noticia-empresarios-eau-conocen-prioridad-tienen-las-inversiones-peru-460098.aspx",
         dtmFecha: "2013-05-26T00:00:00",
         vchHora: "17:18",
-        arrFotografias: [Foto(
+        arrFotografias: [
+        Foto(
             intFotografiaId: 210665,
             intNoticiaId: 460098,
-            vchLeyenda: "Delegación peruana encabezada por el ministro de Economía, Luis Miguel Castilla, en la foto oficial del road show de inversiones que se inició hoy en Abu Dhabi y Dubái. Foto: inPerú",
-            vchUrlImgPequena: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816P.jpg")!,
-            vchUrlImgMediana: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg")!,
-            vchUrlImgWeb: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816W.jpg")!),
+            vchLeyenda: "Delegación peruana encabezada...",
+            vchUrlImgPequena: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816P.jpg",
+            vchUrlImgMediana: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg",
+            vchUrlImgWeb: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816W.jpg"),
         Foto(
             intFotografiaId: 210665,
             intNoticiaId: 460098,
             vchLeyenda: "Delegación peruana.",
-            vchUrlImgPequena: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841P.jpg")!,
-            vchUrlImgMediana: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841M.jpg")!,
-            vchUrlImgWeb: URL(string: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841W.jpg")!)]
+            vchUrlImgPequena: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841P.jpg",
+            vchUrlImgMediana: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841M.jpg",
+            vchUrlImgWeb: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841W.jpg")
+        ]
     )
+    
+    var relatedNews: [NewsItem] = [
+        NewsItem(
+            intNoticiaId: 460098,
+            intSeccionId: 2,
+            vchTitulo: "Techo Propio: lanzan primera convocatoria para bono habitacional de S/ 29,700",
+            vchBajada: "",
+            vchDescripcion: "",
+            txtContenido: "",
+            contenidoLimpio: "",
+            vchCreador: "gcanchari",
+            vchNombreSeccion: "Economía",
+            vchUrl: "",
+            dtmFecha: "2013-05-26T00:00:00",
+            vchHora: "17:18",
+            arrFotografias: [Foto(
+                intFotografiaId: 210665,
+                intNoticiaId: 460098,
+                vchLeyenda: "",
+                vchUrlImgPequena: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816P.jpg",
+                vchUrlImgMediana: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816M.jpg",
+                vchUrlImgWeb: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2018/03/26/000491816W.jpg")]
+        ),
+        NewsItem(
+            intNoticiaId: 460098,
+            intSeccionId: 2,
+            vchTitulo: "Conoce el cronograma 2023 de pagos de sueldos y pensiones en el Estado",
+            vchBajada: "",
+            vchDescripcion: "",
+            txtContenido: "",
+            contenidoLimpio: "",
+            vchCreador: "gcanchari",
+            vchNombreSeccion: "Economía",
+            vchUrl: "",
+            dtmFecha: "2013-05-26T00:00:00",
+            vchHora: "17:18",
+            arrFotografias: [Foto(
+                intFotografiaId: 210665,
+                intNoticiaId: 460098,
+                vchLeyenda: "",
+                vchUrlImgPequena: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841P.jpg",
+                vchUrlImgMediana: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841M.jpg",
+                vchUrlImgWeb: "https://portal.andina.pe/EDPFotografia3/Thumbnail/2019/01/09/000554841W.jpg")]
+        )
+    ]
     
     // MARK: - Outlets∫
     
@@ -75,7 +122,7 @@ class NewsDetailViewController: UIViewController {
 
         // Ajusta el tamaño y la posición del scrollView
         scrollView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-        scrollView.backgroundColor = .lightGray
+        // scrollView.backgroundColor = .lightGray
         
         // Set title label's text
         titleLabel.text = newsItem.vchTitulo
@@ -277,18 +324,29 @@ class NewsDetailViewController: UIViewController {
             containerRelatedNewsView.topAnchor.constraint(equalTo: titleRelatedNewsView.bottomAnchor, constant: 16),
             containerRelatedNewsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             containerRelatedNewsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            containerRelatedNewsView.heightAnchor.constraint(equalToConstant: 100),
+            // containerRelatedNewsView.heightAnchor.constraint(equalToConstant: 100),
             containerRelatedNewsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
         ])
         
+        relatedNewsTableView.isScrollEnabled = false
         relatedNewsTableView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
-            relatedNewsTableView.topAnchor.constraint(equalTo: containerRelatedNewsView.topAnchor, constant: 0),
-            relatedNewsTableView.leadingAnchor.constraint(equalTo: containerRelatedNewsView.leadingAnchor, constant: 0),
-            relatedNewsTableView.trailingAnchor.constraint(equalTo: containerRelatedNewsView.trailingAnchor, constant: 0),
-            relatedNewsTableView.bottomAnchor.constraint(equalTo: containerRelatedNewsView.bottomAnchor, constant: 0),
+            relatedNewsTableView.topAnchor.constraint(equalTo: titleRelatedNewsView.bottomAnchor, constant: 16),
+            relatedNewsTableView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 30),
+            relatedNewsTableView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -30),
+            relatedNewsTableView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
+            relatedNewsTableView.heightAnchor.constraint(equalToConstant: CGFloat(relatedNews.count * 136))
         ])
+        
+        relatedNewsTableView.dataSource = self
+        relatedNewsTableView.delegate = self
+        
+        let nib = UINib(nibName: "RelatedNewsTableViewCell", bundle: nil)
+        
+        relatedNewsTableView.register(nib, forCellReuseIdentifier: "RelatedNewsTableViewCell")
+        // relatedNews =
+        relatedNewsTableView.reloadData()
         
         /*
         AF.request("http://104.196.199.198/api/EdpNoticias/460098").responseDecodable(of: NewsItem.self) {
@@ -333,9 +391,8 @@ class NewsDetailViewController: UIViewController {
         carouselPageControl.currentPage = newIndex
         // Actualiza la imagen en el carrusel de imágenes
         let url = newsItem.arrFotografias[newIndex].vchUrlImgMediana
-        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgMediana
         print("next \(url)")
-        carouselView.sd_setImage(with: url, completed: nil)
+        // carouselView.sd_setImage(with: url, completed: nil)
     }
     
     @IBAction func didTapRightButton(_ sender: Any) {
@@ -346,8 +403,7 @@ class NewsDetailViewController: UIViewController {
         // Actualiza la imagen en el carrusel de imágenes
         let url = newsItem.arrFotografias[newIndex].vchUrlImgMediana
         print("next \(url)")
-        carouselView.sd_setImage(with: url, completed: nil)
-        // carouselView.image = newsItem.arrFotografias[newIndex].vchUrlImgMediana
+        // carouselView.sd_setImage(with: url, completed: nil)
     }
     
     @IBAction func didTabShareButton(_ sender: Any) {
@@ -368,5 +424,41 @@ class NewsDetailViewController: UIViewController {
     @IBAction func didTabReadingButton(_ sender: Any) {
         print("reading")
     }
+    
+}
+
+
+extension NewsDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return relatedNews.count
+    }
+        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RelatedNewsTableViewCell", for: indexPath) as! RelatedNewsTableViewCell
+        
+        cell.selectionStyle = .none
+            
+        // Configura la celda con los datos correspondientes
+        let newsItem = relatedNews[indexPath.row]
+        
+        cell.titleLabel.text = newsItem.vchTitulo
+        
+        if let url = URL(string: newsItem.arrFotografias[0].vchUrlImgMediana) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        cell.thumbnail.image = image
+                    }
+                }
+            }
+            task.resume()
+        }
+        
+   
+        return cell
+    }
+}
+
+extension NewsDetailViewController: UITableViewDelegate {
     
 }
