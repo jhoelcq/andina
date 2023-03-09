@@ -201,21 +201,17 @@ class NewsDetailViewController: UIViewController {
         shareButton.setTitle("Compartir", for: .normal)
         shareButton.setTitleColor(.black, for: .normal)
         shareButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        shareButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         
         sizeFontButton.setTitle("", for: .normal)
         sizeFontButton.setTitleColor(.black, for: .normal)
-        sizeFontButton.setImage(UIImage(named: "iconSave"), for: .normal)
         sizeFontButton.backgroundColor = .gray
         
         saveButton.setTitle("", for: .normal)
         saveButton.setTitleColor(.black, for: .normal)
-        saveButton.setImage(UIImage(named: "iconSave"), for: .normal)
         saveButton.backgroundColor = .gray
 
         readingButton.setTitle("", for: .normal)
         readingButton.setTitleColor(.black, for: .normal)
-        readingButton.setImage(UIImage(named: "iconSave"), for: .normal)
         readingButton.backgroundColor = .gray
         
         groupRightButtons.axis = .horizontal

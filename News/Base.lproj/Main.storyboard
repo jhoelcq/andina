@@ -415,11 +415,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3s3-ZO-E6e">
-                                <rect key="frame" x="0.0" y="92" width="417" height="804"/>
+                                <rect key="frame" x="0.0" y="44" width="417" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OM-Tq-wYh">
-                                        <rect key="frame" x="15" y="8" width="384" height="58"/>
+                                        <rect key="frame" x="15" y="8" width="384" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -434,19 +434,19 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-M3-Mi6">
-                                        <rect key="frame" x="15" y="157" width="59" height="35"/>
+                                        <rect key="frame" x="29" y="160" width="31" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Prev"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowLeft"/>
                                         <connections>
                                             <action selector="didTapLeftButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="bjX-At-R2u"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-fo-vbe">
-                                        <rect key="frame" x="339" y="157" width="60" height="35"/>
+                                        <rect key="frame" x="354" y="160" width="31" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowRight"/>
                                         <connections>
                                             <action selector="didTapRightButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="iuw-YF-4ub"/>
                                         </connections>
@@ -472,40 +472,40 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="g4S-m6-PHJ">
-                                        <rect key="frame" x="15" y="358" width="384" height="34.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="g4S-m6-PHJ">
+                                        <rect key="frame" x="15" y="358" width="383.5" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-V4-osV">
-                                                <rect key="frame" x="0.0" y="0.0" width="183" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="44"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Compartir"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="arrowRight" imagePlacement="trailing" title="Compartir" imagePadding="8"/>
                                                 <connections>
                                                     <action selector="didTabShareButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="D6i-nR-taa"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbH-1a-DLi">
-                                                <rect key="frame" x="201" y="0.0" width="183" height="34.5"/>
+                                                <rect key="frame" x="247.5" y="0.0" width="136" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwr-p1-XB8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="44"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="aA"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="iconSave"/>
                                                         <connections>
                                                             <action selector="didTabSizeFontButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="ZD1-RW-QPw"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srU-Qz-pez">
-                                                        <rect key="frame" x="61" y="0.0" width="61" height="34.5"/>
+                                                        <rect key="frame" x="41" y="0.0" width="54" height="44"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="iconSettings"/>
                                                         <connections>
                                                             <action selector="didTabSaveButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="872-aG-BPd"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4q-bo-6Yl">
-                                                        <rect key="frame" x="122" y="0.0" width="61" height="34.5"/>
+                                                        <rect key="frame" x="95" y="0.0" width="41" height="44"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Mic"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="iconSave"/>
                                                         <connections>
                                                             <action selector="didTabReadingButton:" destination="gGc-yH-jcW" eventType="touchUpInside" id="Yl6-sr-1PE"/>
                                                         </connections>
@@ -553,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-CY-vkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333.33333333333337" y="766.74107142857144"/>
+            <point key="canvasLocation" x="333.33333333333337" y="766.07142857142856"/>
         </scene>
         <!--Demo View Controller-->
         <scene sceneID="MHj-Ar-sVe">
@@ -609,7 +609,10 @@
     <resources>
         <image name="LogoAndinaBlanco" width="250.5" height="83.5"/>
         <image name="TextIntro" width="215" height="126.5"/>
+        <image name="arrowLeft" width="6.5" height="15"/>
+        <image name="arrowRight" width="7" height="15"/>
         <image name="iconGoogleBtn" width="25" height="25"/>
+        <image name="iconSave" width="17" height="23"/>
         <image name="iconSettings" width="30" height="30"/>
         <namedColor name="BgGoogle">
             <color red="0.25882352941176473" green="0.52156862745098043" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
