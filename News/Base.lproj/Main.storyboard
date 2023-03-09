@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -523,6 +528,31 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-Rf-hrq">
+                                        <rect key="frame" x="15" y="565" width="384" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="También te puede interesar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pje-nP-8Gm">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-yD-isf">
+                                                <rect key="frame" x="185" y="11" width="191" height="1"/>
+                                                <color key="backgroundColor" name="SplashscreenBG"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="AY8-Iw-rAp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="QPZ-yD-isf" firstAttribute="leading" secondItem="Pje-nP-8Gm" secondAttribute="trailing" constant="13" id="1Zh-Hw-fmP"/>
+                                            <constraint firstItem="Pje-nP-8Gm" firstAttribute="leading" secondItem="sRb-Rf-hrq" secondAttribute="leading" id="J4Z-OV-eDG"/>
+                                            <constraint firstItem="QPZ-yD-isf" firstAttribute="top" secondItem="sRb-Rf-hrq" secondAttribute="top" constant="11" id="Vj6-o7-PUi"/>
+                                            <constraint firstAttribute="trailing" secondItem="QPZ-yD-isf" secondAttribute="trailing" id="dus-dK-kjY"/>
+                                            <constraint firstItem="Pje-nP-8Gm" firstAttribute="top" secondItem="sRb-Rf-hrq" secondAttribute="top" id="vUP-I8-uCp"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ABg-a9-hqV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="NFl-tc-h3N"/>
@@ -549,6 +579,7 @@
                         <outlet property="sizeFontButton" destination="mwr-p1-XB8" id="dbv-Vw-uVc"/>
                         <outlet property="timeLabel" destination="3Rt-Cr-hhr" id="ZFt-Ry-gAL"/>
                         <outlet property="titleLabel" destination="4OM-Tq-wYh" id="TzO-7H-Ood"/>
+                        <outlet property="titleRelatedNewsView" destination="sRb-Rf-hrq" id="hNo-HR-ZVm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-CY-vkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

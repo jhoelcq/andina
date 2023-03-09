@@ -60,6 +60,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var readingButton: UIButton!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var titleRelatedNewsView: UIView!
     
     // MARK: - Lifecycle∫
     
@@ -72,7 +73,7 @@ class NewsDetailViewController: UIViewController {
 
         // Ajusta el tamaño y la posición del scrollView
         scrollView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-        scrollView.backgroundColor = .orange
+        scrollView.backgroundColor = .lightGray
         
         // Set title label's text
         titleLabel.text = newsItem.vchTitulo
@@ -255,7 +256,18 @@ class NewsDetailViewController: UIViewController {
             bodyTextView.topAnchor.constraint(equalTo: groupContainer.bottomAnchor, constant: 16),
             bodyTextView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             bodyTextView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            bodyTextView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
+            // bodyTextView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
+        ])
+        
+        titleRelatedNewsView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Establece las restricciones de diseño para la nueva UIView en relación a bodyTextView
+        NSLayoutConstraint.activate([
+            titleRelatedNewsView.topAnchor.constraint(equalTo: bodyTextView.bottomAnchor, constant: 16),
+            titleRelatedNewsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            titleRelatedNewsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            titleRelatedNewsView.heightAnchor.constraint(equalToConstant: 20),
+            titleRelatedNewsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)
         ])
 
         /*
