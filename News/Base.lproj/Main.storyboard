@@ -154,6 +154,15 @@
                                     <action selector="goToSegueDemoView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqz-1L-5LU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-z3-WZq">
+                                <rect key="frame" x="148" y="662" width="119" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Vista Videos"/>
+                                <connections>
+                                    <segue destination="uPd-u3-Gxb" kind="show" id="jbD-u9-CeN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -602,6 +611,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-CY-vkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="333.33333333333337" y="766.07142857142856"/>
+        </scene>
+        <!--Videos View Controller-->
+        <scene sceneID="rh1-F8-WKf">
+            <objects>
+                <viewController id="uPd-u3-Gxb" customClass="VideosViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="efR-3Q-WQv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nWE-Te-cF4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JGH-TD-3Lx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17B-T4-kr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="766"/>
         </scene>
         <!--Demo View Controller-->
         <scene sceneID="MHj-Ar-sVe">
