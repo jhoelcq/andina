@@ -10,10 +10,11 @@ import FirebaseAnalytics
 import FirebaseAuth
 // import GoogleSignIn
 import Alamofire
+import SideMenu
 
 // GIDSignInDelegate
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, MenuControllerDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,6 +23,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var authstackView: UIStackView!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
+    
+    private var sidemenu: SideMenuNavigationController?
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
@@ -34,6 +37,16 @@ class AuthViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         title = nil
+        
+        let menu = MenuController(with: ["Home", "Info", "Settings"])
+        menu.delegate = self
+        
+        sidemenu = SideMenuNavigationController(rootViewController: menu)
+        
+        sidemenu?.leftSide = true
+        
+        SideMenuManager.default.leftMenuNavigationController = sidemenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
         
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters:[ "message":"Integracion FB" ])
@@ -215,6 +228,27 @@ class AuthViewController: UIViewController {
     
     @IBAction func goViewLasted(_ sender: Any) {
         performSegue(withIdentifier: "viewLastedNews", sender: nil)
+    }
+    
+    @IBAction func goMenu(_ sender: Any) {
+        present(sidemenu!, animated: true, completion: nil)
+    }
+    
+    
+    func didSelectMenuItem(named: String) {
+        sidemenu?.dismiss(animated: true, completion: { [weak self] in
+            
+            if named == "Home" {
+                self?.view.backgroundColor = .red
+            }
+            else if named == "Info"{
+                self?.view.backgroundColor = .blue
+            }
+            else if named == "Settings"{
+                self?.view.backgroundColor = .green
+            }
+            
+        })
     }
     
 }

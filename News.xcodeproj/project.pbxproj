@@ -28,6 +28,7 @@
 		D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */; };
 		D864E8CB29A53963007DC4DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864E8CA29A53963007DC4DE /* HomeViewController.swift */; };
 		D864E8CD29A586AA007DC4DE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D864E8CC29A586A9007DC4DE /* HomeViewController.xib */; };
+		D874127629BAA4D200A0D388 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D874127529BAA4D200A0D388 /* SideMenu.swift */; };
 		D8C20000299C13CE000D78FC /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D8C2FFFF299C13CE000D78FC /* FirebaseInAppMessaging-Beta */; };
 		D8C20002299C13CF000D78FC /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D8C20001299C13CF000D78FC /* FirebaseInAppMessagingSwift-Beta */; };
 		D8C20004299C13D0000D78FC /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D8C20003299C13D0000D78FC /* FirebasePerformance */; };
@@ -101,6 +102,7 @@
 		D84538EB29B7ECFF00F78E72 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		D864E8CA29A53963007DC4DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D864E8CC29A586A9007DC4DE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D874127529BAA4D200A0D388 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		D8C2FFB3299AA3CA000D78FC /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2FFB6299AA3CA000D78FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2FFB8299AA3CA000D78FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				0B22B1D229BA2BFE002B6CA5 /* RelatedNewsTableViewCell.swift */,
 				0B22B1D329BA2BFE002B6CA5 /* RelatedNewsTableViewCell.xib */,
 				0B2E37EA29BA6DEE0041C2E7 /* VideosViewController.swift */,
+				D874127529BAA4D200A0D388 /* SideMenu.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				D8C2FFBB299AA3CA000D78FC /* AuthViewController.swift in Sources */,
 				D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */,
 				0B4041DE29B78437004E757F /* Session.swift in Sources */,
+				D874127629BAA4D200A0D388 /* SideMenu.swift in Sources */,
 				D82A4EBA29B905F0002604ED /* LastedNewsViewController.swift in Sources */,
 				0B4041E629B7AAE6004E757F /* NewsDetailViewController.swift in Sources */,
 				D82A4ECA29B939AC002604ED /* LastedMainTableViewCell.swift in Sources */,

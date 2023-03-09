@@ -181,7 +181,13 @@
                             <constraint firstItem="P2r-Go-MBs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="lqz-gp-vrl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Q5-0c-k7q"/>
+                    <navigationItem key="navigationItem" id="9Q5-0c-k7q">
+                        <barButtonItem key="leftBarButtonItem" title="MENU" id="ho2-rn-NwH">
+                            <connections>
+                                <action selector="goMenu:" destination="BYZ-38-t0r" id="Kev-5c-ep1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authstackView" destination="3Fi-XI-zA9" id="c2r-yX-eNz"/>
                         <outlet property="emailTextField" destination="xZr-rj-gAC" id="1pi-HO-Ogw"/>
