@@ -54,13 +54,19 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableViewCategories: UITableView!
     
+    @IBOutlet var sideMenuBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = nil
-        self.navigationController?.isNavigationBarHidden = true
+        // self.navigationController?.isNavigationBarHidden = true
         navigationItem.setHidesBackButton(true, animated: false)
+        
+        sideMenuBtn.target = revealViewController()
+        sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
+        
         
         tableViewCategories.dataSource = self
         tableViewCategories.delegate = self
@@ -84,9 +90,24 @@ class CategoriesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.revealViewController()?.gestureEnabled = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.revealViewController()?.gestureEnabled = true
+    }
+    
 
     @IBAction func goButtonAction(_ sender: Any) {
         print("CATEGORIAS")
+    }
+    @IBAction func goDemoSegue(_ sender: Any) {
+        
+        performSegue(withIdentifier: "DemoSegue", sender: nil)
     }
 }
 
