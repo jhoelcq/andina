@@ -8,10 +8,10 @@
 import Foundation
 
 struct DataVideoItem: Decodable {
-    let data: [NewsItem]
+    let data: [VideoItem]
 }
 
-struct VideoItem {
+struct VideoItem: Decodable {
     let intMediaId: Int
     let intMediaGroupId: Int
     let vchTitulo: String

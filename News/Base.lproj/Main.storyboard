@@ -163,6 +163,15 @@
                                     <segue destination="p9a-jr-ci3" kind="show" id="crd-pl-8nn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIZ-gl-hBY">
+                                <rect key="frame" x="158" y="662" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Galeria"/>
+                                <connections>
+                                    <segue destination="fCO-oD-WL1" kind="show" id="3mW-jo-Maj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-z3-WZq">
                                 <rect key="frame" x="30" y="662" width="119" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -307,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63X-hi-1rp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066.666666666667" y="-33.482142857142854"/>
+            <point key="canvasLocation" x="1887" y="-654"/>
         </scene>
         <!--Lasted News View Controller-->
         <scene sceneID="gu5-JD-YvQ">
@@ -404,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mp-lm-uoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2755" y="-33"/>
+            <point key="canvasLocation" x="2630" y="-654"/>
         </scene>
         <!--News Detail View Controller-->
         <scene sceneID="LQ6-ta-AAV">
@@ -705,6 +714,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2h-D3-sur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="87.723214285714278"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="0ZV-pp-07Z">
+            <objects>
+                <viewController id="fCO-oD-WL1" customClass="GalleryViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8CN-58-wiE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2SA-bN-HbV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FDI-Vz-Qof"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpG-XU-JRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">
