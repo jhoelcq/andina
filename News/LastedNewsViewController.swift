@@ -56,13 +56,19 @@ class LastedNewsViewController: UIViewController {
     
     @IBOutlet weak var tableViewLasted: UITableView!
     
+    @IBOutlet var sideMenuBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = nil
-        self.navigationController?.isNavigationBarHidden = true
+        // self.navigationController?.isNavigationBarHidden = true
         navigationItem.setHidesBackButton(true, animated: false)
+        
+        sideMenuBtn.target = revealViewController()
+        sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
+        
         
         tableViewLasted.dataSource = self
         tableViewLasted.delegate = self
@@ -75,6 +81,17 @@ class LastedNewsViewController: UIViewController {
         tableViewLasted.register(UINib(nibName: "LastedMainTableViewCell", bundle: nil), forCellReuseIdentifier: "cellMainLasted")
          
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.revealViewController()?.gestureEnabled = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.revealViewController()?.gestureEnabled = true
+    }
+    
 }
 
 enum CellTypeLasted {
