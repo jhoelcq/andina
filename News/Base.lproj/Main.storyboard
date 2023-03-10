@@ -157,8 +157,26 @@
                                     <action selector="goToSegueDemoView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqz-1L-5LU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-uJ-d7j">
+                                <rect key="frame" x="289" y="619" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mis news"/>
+                                <connections>
+                                    <segue destination="p9a-jr-ci3" kind="show" id="crd-pl-8nn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIZ-gl-hBY">
+                                <rect key="frame" x="158" y="662" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Galeria"/>
+                                <connections>
+                                    <segue destination="fCO-oD-WL1" kind="show" id="3mW-jo-Maj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-z3-WZq">
-                                <rect key="frame" x="148" y="662" width="119" height="35"/>
+                                <rect key="frame" x="30" y="662" width="119" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Vista Videos"/>
@@ -337,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyb-r0-bkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="84"/>
+            <point key="canvasLocation" x="1461" y="88"/>
         </scene>
         <!--Lasted News View Controller-->
         <scene sceneID="gu5-JD-YvQ">
@@ -626,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-CY-vkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333.33333333333337" y="766.07142857142856"/>
+            <point key="canvasLocation" x="-1399" y="88"/>
         </scene>
         <!--Videos View Controller-->
         <scene sceneID="rh1-F8-WKf">
@@ -706,7 +724,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17B-T4-kr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="765.40178571428567"/>
+            <point key="canvasLocation" x="-714" y="88"/>
+        </scene>
+        <!--My News View Controller-->
+        <scene sceneID="b7U-tn-Vay">
+            <objects>
+                <viewController id="p9a-jr-ci3" customClass="MyNewsViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ml4-gO-1J2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-Oh-Bwu">
+                                <rect key="frame" x="16" y="116" width="382" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gqq-aP-6dU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="top" secondItem="gqq-aP-6dU" secondAttribute="top" constant="24" id="J2y-LR-fzE"/>
+                            <constraint firstItem="gqq-aP-6dU" firstAttribute="trailing" secondItem="Qpl-Oh-Bwu" secondAttribute="trailing" constant="16" id="OZU-8y-nYC"/>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="bottom" secondItem="gqq-aP-6dU" secondAttribute="bottom" id="RCA-sp-3Bj"/>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="leading" secondItem="gqq-aP-6dU" secondAttribute="leading" constant="16" id="faQ-ER-9CE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vBP-cn-4rv"/>
+                    <connections>
+                        <outlet property="myNewsTableView" destination="Qpl-Oh-Bwu" id="8UH-jW-Cco"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2h-D3-sur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="87.723214285714278"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="0ZV-pp-07Z">
+            <objects>
+                <viewController id="fCO-oD-WL1" customClass="GalleryViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8CN-58-wiE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2SA-bN-HbV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FDI-Vz-Qof"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpG-XU-JRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">
