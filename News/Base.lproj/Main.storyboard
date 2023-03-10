@@ -682,14 +682,29 @@
                     <view key="view" contentMode="scaleToFill" id="ml4-gO-1J2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-Oh-Bwu">
+                                <rect key="frame" x="16" y="116" width="382" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gqq-aP-6dU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="top" secondItem="gqq-aP-6dU" secondAttribute="top" constant="24" id="J2y-LR-fzE"/>
+                            <constraint firstItem="gqq-aP-6dU" firstAttribute="trailing" secondItem="Qpl-Oh-Bwu" secondAttribute="trailing" constant="16" id="OZU-8y-nYC"/>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="bottom" secondItem="gqq-aP-6dU" secondAttribute="bottom" id="RCA-sp-3Bj"/>
+                            <constraint firstItem="Qpl-Oh-Bwu" firstAttribute="leading" secondItem="gqq-aP-6dU" secondAttribute="leading" constant="16" id="faQ-ER-9CE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vBP-cn-4rv"/>
+                    <connections>
+                        <outlet property="myNewsTableView" destination="Qpl-Oh-Bwu" id="8UH-jW-Cco"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2h-D3-sur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="88"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">

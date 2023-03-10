@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MyNewsTableViewCell_Id" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="MyNewsTableViewCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="166"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj8-J2-vUI">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="146"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kkL-jj-2eQ">
+                                <rect key="frame" x="199" y="8" width="144" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="5oO-fm-2Q2"/>
+                                    <constraint firstAttribute="width" constant="144" id="V94-8u-c9D"/>
+                                    <constraint firstAttribute="height" constant="130" id="VrT-ay-BLR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regionales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-8h-a4X">
+                                <rect key="frame" x="10" y="8" width="173" height="15"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="10"/>
+                                <color key="textColor" name="SplashscreenBG"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Techo Propio: lanzan primera convocatoria para bono habitacional de S/ 29,700" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as5-xE-duI">
+                                <rect key="frame" x="10" y="26" width="173" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="Vui-mq-TZu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNews" translatesAutoresizingMaskIntoConstraints="NO" id="K9i-So-LWQ">
+                                <rect key="frame" x="10" y="123.33333333333333" width="8.3333333333333357" height="12.666666666666671"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="10:11 - 05 febrero, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueT-Xl-PIq">
+                                <rect key="frame" x="23" y="124" width="160" height="12"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="top" secondItem="Myx-8h-a4X" secondAttribute="top" id="0Qm-L7-61h"/>
+                            <constraint firstAttribute="trailing" secondItem="kkL-jj-2eQ" secondAttribute="trailing" constant="10" id="81b-MD-v0O"/>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="leading" secondItem="ueT-Xl-PIq" secondAttribute="trailing" constant="16" id="8lc-uh-MAU"/>
+                            <constraint firstItem="as5-xE-duI" firstAttribute="leading" secondItem="gj8-J2-vUI" secondAttribute="leading" constant="10" id="9wi-Mz-UcD"/>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="top" secondItem="gj8-J2-vUI" secondAttribute="top" constant="8" id="AfH-y4-CBn"/>
+                            <constraint firstItem="K9i-So-LWQ" firstAttribute="leading" secondItem="gj8-J2-vUI" secondAttribute="leading" constant="10" id="KdZ-oK-0tb"/>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="leading" secondItem="as5-xE-duI" secondAttribute="trailing" constant="16" id="P4K-O8-7if"/>
+                            <constraint firstItem="Myx-8h-a4X" firstAttribute="top" secondItem="gj8-J2-vUI" secondAttribute="top" constant="8" id="VIN-xd-CGZ"/>
+                            <constraint firstItem="as5-xE-duI" firstAttribute="top" secondItem="Myx-8h-a4X" secondAttribute="bottom" constant="3" id="VU2-l6-2lw"/>
+                            <constraint firstAttribute="bottom" secondItem="kkL-jj-2eQ" secondAttribute="bottom" constant="8" id="cIC-Hq-aFh"/>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="leading" secondItem="Myx-8h-a4X" secondAttribute="trailing" constant="16" id="e6x-Wt-Mu7"/>
+                            <constraint firstAttribute="bottom" secondItem="ueT-Xl-PIq" secondAttribute="bottom" constant="10" id="fni-7Z-sQf"/>
+                            <constraint firstItem="kkL-jj-2eQ" firstAttribute="centerY" secondItem="as5-xE-duI" secondAttribute="centerY" id="keR-de-1B7"/>
+                            <constraint firstItem="ueT-Xl-PIq" firstAttribute="leading" secondItem="K9i-So-LWQ" secondAttribute="trailing" constant="4.6699999999999999" id="lmP-Uu-3Me"/>
+                            <constraint firstItem="Myx-8h-a4X" firstAttribute="leading" secondItem="gj8-J2-vUI" secondAttribute="leading" constant="10" id="sfV-Gy-gUf"/>
+                            <constraint firstItem="K9i-So-LWQ" firstAttribute="top" secondItem="as5-xE-duI" secondAttribute="bottom" constant="3.3300000000000001" id="vfb-Jo-egU"/>
+                            <constraint firstAttribute="bottom" secondItem="K9i-So-LWQ" secondAttribute="bottom" constant="10" id="wlH-7t-b3m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gj8-J2-vUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0VA-gy-TSX"/>
+                    <constraint firstItem="gj8-J2-vUI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DKZ-Fk-tly"/>
+                    <constraint firstAttribute="trailing" secondItem="gj8-J2-vUI" secondAttribute="trailing" id="LlD-7U-i2S"/>
+                    <constraint firstAttribute="bottom" secondItem="gj8-J2-vUI" secondAttribute="bottom" constant="20" id="rFW-FQ-5If"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="gj8-J2-vUI" id="vf8-p4-ANo"/>
+                <outlet property="dateTimeLabel" destination="ueT-Xl-PIq" id="kgp-Pz-aeI"/>
+                <outlet property="sectionLabel" destination="Myx-8h-a4X" id="hZN-7v-iPZ"/>
+                <outlet property="thumbnail" destination="kkL-jj-2eQ" id="ki5-Aj-iRd"/>
+                <outlet property="titleLabel" destination="as5-xE-duI" id="OOz-wz-deu"/>
+            </connections>
+            <point key="canvasLocation" x="159.54198473282443" y="33.802816901408455"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconNews" width="8.3333330154418945" height="10"/>
+        <namedColor name="SplashscreenBG">
+            <color red="0.92941176470588238" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
