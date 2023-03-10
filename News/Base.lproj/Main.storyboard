@@ -722,14 +722,29 @@
                     <view key="view" contentMode="scaleToFill" id="8CN-58-wiE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iOZ-cs-Oyv">
+                                <rect key="frame" x="16" y="116" width="382" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2SA-bN-HbV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iOZ-cs-Oyv" firstAttribute="bottom" secondItem="2SA-bN-HbV" secondAttribute="bottom" id="efb-Oe-CGl"/>
+                            <constraint firstItem="iOZ-cs-Oyv" firstAttribute="leading" secondItem="2SA-bN-HbV" secondAttribute="leading" constant="16" id="f9s-gL-25N"/>
+                            <constraint firstItem="2SA-bN-HbV" firstAttribute="trailing" secondItem="iOZ-cs-Oyv" secondAttribute="trailing" constant="16" id="ppb-kT-IGi"/>
+                            <constraint firstItem="iOZ-cs-Oyv" firstAttribute="top" secondItem="2SA-bN-HbV" secondAttribute="top" constant="24" id="w4Z-UX-kwS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FDI-Vz-Qof"/>
+                    <connections>
+                        <outlet property="galleryTableView" destination="iOZ-cs-Oyv" id="kCw-m8-Eon"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpG-XU-JRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="88"/>
+            <point key="canvasLocation" x="695.6521739130435" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">
