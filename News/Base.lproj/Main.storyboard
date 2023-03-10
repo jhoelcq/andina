@@ -154,8 +154,17 @@
                                     <action selector="goToSegueDemoView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqz-1L-5LU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-uJ-d7j">
+                                <rect key="frame" x="289" y="619" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mis news"/>
+                                <connections>
+                                    <segue destination="p9a-jr-ci3" kind="show" id="crd-pl-8nn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-z3-WZq">
-                                <rect key="frame" x="148" y="662" width="119" height="35"/>
+                                <rect key="frame" x="30" y="662" width="119" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Vista Videos"/>
@@ -584,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-CY-vkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333.33333333333337" y="766.07142857142856"/>
+            <point key="canvasLocation" x="-1399" y="88"/>
         </scene>
         <!--Videos View Controller-->
         <scene sceneID="rh1-F8-WKf">
@@ -664,7 +673,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17B-T4-kr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="765.40178571428567"/>
+            <point key="canvasLocation" x="-714" y="88"/>
+        </scene>
+        <!--My News View Controller-->
+        <scene sceneID="b7U-tn-Vay">
+            <objects>
+                <viewController id="p9a-jr-ci3" customClass="MyNewsViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ml4-gO-1J2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gqq-aP-6dU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vBP-cn-4rv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2h-D3-sur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTd-dJ-kYU">
