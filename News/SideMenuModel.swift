@@ -7,6 +7,8 @@
 import UIKit
 
 struct SideMenuModel {
+    var type: String
     var icon: UIImage
     var title: String
+    var height: Int
 }

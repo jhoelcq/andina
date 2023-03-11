@@ -858,12 +858,12 @@
                         <viewLayoutGuide key="safeArea" id="GOg-kB-hko"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="leading" secondItem="GOg-kB-hko" secondAttribute="leading" id="5YN-0B-Dxq"/>
-                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="top" secondItem="I1g-ZS-Z2J" secondAttribute="bottom" id="9Nz-Zu-snv"/>
-                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="trailing" secondItem="GOg-kB-hko" secondAttribute="trailing" id="QG6-6r-ytC"/>
-                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="bottom" secondItem="GOg-kB-hko" secondAttribute="bottom" id="RlE-Tu-MRM"/>
+                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="top" secondItem="I1g-ZS-Z2J" secondAttribute="bottom" id="FHk-GH-Ay2"/>
+                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="trailing" secondItem="GOg-kB-hko" secondAttribute="trailing" id="XXA-dM-BwC"/>
                             <constraint firstAttribute="trailing" secondItem="I1g-ZS-Z2J" secondAttribute="trailing" id="YLz-mY-ptr"/>
+                            <constraint firstItem="GOg-kB-hko" firstAttribute="bottom" secondItem="2fr-nD-Sj7" secondAttribute="bottom" id="Z58-0u-tcv"/>
                             <constraint firstItem="I1g-ZS-Z2J" firstAttribute="leading" secondItem="JZI-d3-VE6" secondAttribute="leading" id="fBK-X2-KR8"/>
+                            <constraint firstItem="2fr-nD-Sj7" firstAttribute="leading" secondItem="GOg-kB-hko" secondAttribute="leading" id="kWZ-cD-ChX"/>
                             <constraint firstItem="I1g-ZS-Z2J" firstAttribute="top" secondItem="JZI-d3-VE6" secondAttribute="top" id="odD-cj-paM"/>
                         </constraints>
                     </view>
