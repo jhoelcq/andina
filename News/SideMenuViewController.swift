@@ -133,6 +133,12 @@ class SideMenuViewController: UIViewController {
                 height: 40
             ),
             SideMenuModel(
+                type: "simple",
+                icon: UIImage(systemName: "person.fill")!,
+                title: "Buscador",
+                height: 40
+            ),
+            SideMenuModel(
                 type: "space",
                 icon: UIImage(systemName: "film.fill")!,
                 title: "",

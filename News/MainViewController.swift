@@ -163,6 +163,10 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case 5:
             
             self.showViewController(viewController: UINavigationController.self, storyboardId: "GalleryNavID")
+            
+        case 19:
+            
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "SearchNavID")
         
         /*
              case 6:
