@@ -45,7 +45,6 @@ class SearchViewController: UIViewController {
         )
     ]
 
-    
     @IBOutlet weak var containerInputSearch: UIView!
     @IBOutlet weak var searchTableView: UITableView!
     

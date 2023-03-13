@@ -24,16 +24,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-Uu-ru9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="250"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con goles de Messi y Mbappé, el PSG supera 3-0 al Olympique de Marsella" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-3W-WQa">
-                                <rect key="frame" x="0.0" y="16" width="320" height="38"/>
+                                <rect key="frame" x="0.0" y="16" width="288" height="38"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sC8-LD-ElJ">
-                                <rect key="frame" x="0.0" y="70" width="320" height="160"/>
+                                <rect key="frame" x="0.0" y="70" width="288" height="160"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="7Iq-mZ-0d4"/>
@@ -83,9 +83,9 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ogo-Uu-ru9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1WT-6d-kts"/>
+                    <constraint firstItem="ogo-Uu-ru9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1WT-6d-kts"/>
                     <constraint firstItem="ogo-Uu-ru9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Os-e5-Utv"/>
-                    <constraint firstAttribute="trailing" secondItem="ogo-Uu-ru9" secondAttribute="trailing" id="ab9-2C-mLv"/>
+                    <constraint firstAttribute="trailing" secondItem="ogo-Uu-ru9" secondAttribute="trailing" constant="16" id="ab9-2C-mLv"/>
                     <constraint firstAttribute="bottom" secondItem="ogo-Uu-ru9" secondAttribute="bottom" id="zfc-gp-aFw"/>
                 </constraints>
             </tableViewCellContentView>
