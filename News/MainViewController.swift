@@ -154,7 +154,7 @@ extension MainViewController: SideMenuViewControllerDelegate {
             
             self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
         
-        case 3:
+        case 18:
             
             self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
         case 4:
