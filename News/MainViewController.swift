@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     private var sideMenuViewController: SideMenuViewController!
     private var sideMenuShadowView: UIView!
-    private var sideMenuRevealWidth: CGFloat = 260
+    private var sideMenuRevealWidth: CGFloat = 350
     private let paddingForRotation: CGFloat = 150
     private var isExpanded: Bool = false
     private var draggingIsEnabled: Bool = false
@@ -145,29 +145,43 @@ extension MainViewController: SideMenuViewControllerDelegate {
     func selectedCell(_ row: Int) {
         switch row {
         case 0:
-            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "HomeNavID")
         case 1:
-            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "CategoryNavID")
         case 2:
-            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
         
-        case 3:
-            
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
-        case 4:
-            
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "MyNewsNavID")
         case 5:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 6:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 7:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 8:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 9:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 10:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 11:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 12:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 13:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
+        case 14:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
             
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "GalleryNavID")
-        
+        case 16:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "SettingsNavID")
+        case 17:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
+        case 18:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
         /*
              case 6:
             // Like us on facebook
-            let safariVC = SFSafariViewController(url: URL(string: "https://www.facebook.com/johncodeos")!)
+            let safariVC = SFSafariViewController(url: URL(string: "URLEXTERNA")!)
             present(safariVC, animated: true)
          */
         default:

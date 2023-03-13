@@ -20,31 +20,31 @@ class SideMenuViewController: UIViewController {
         var menu: [SideMenuModel] = [
             SideMenuModel(
                 type: "icon",
-                icon: UIImage(systemName: "house.fill")!,
+                icon: UIImage(named: "iconUserWhite")!,
                 title: "Iniciar sesión",
                 height: 40
             ),
             SideMenuModel(
                 type: "bold",
-                icon: UIImage(systemName: "music.note")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "PORTADA",
-                height: 40
+                height: 42
             ),
             SideMenuModel(
                 type: "bold",
-                icon: UIImage(systemName: "film.fill")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "ÚLTIMAS NOTICIAS",
-                height: 40
+                height: 42
             ),
             SideMenuModel(
                 type: "space",
-                icon: UIImage(systemName: "film.fill")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "",
                 height: 11
             ),
             SideMenuModel(
                 type: "section",
-                icon: UIImage(systemName: "book.fill")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Secciones/Actualidad",
                 height: 40
             ),
@@ -52,89 +52,89 @@ class SideMenuViewController: UIViewController {
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Política",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Economía",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Regionales",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Locales",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Internacional",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Cultural",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Deporte",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Clic",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Ciencia y Tecnología",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Cambio Climático",
-                height: 30
+                height: 34
             ),
             SideMenuModel(
                 type: "space",
-                icon: UIImage(systemName: "film.fill")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "",
                 height: 11
             ),
             SideMenuModel(
                 type: "icon",
-                icon: UIImage(systemName: "person.fill")!,
+                icon: UIImage(named: "iconSettings")!,
                 title: "Configuración",
-                height: 40
+                height: 32
             ),
             SideMenuModel(
                 type: "simple",
-                icon: UIImage(systemName: "slider.horizontal.3")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "Canal Online",
-                height: 40
+                height: 34
             ),
             SideMenuModel(
                 type: "simple",
                 icon: UIImage(systemName: "person.fill")!,
                 title: "Videos",
-                height: 40
+                height: 34
             ),
             SideMenuModel(
                 type: "space",
-                icon: UIImage(systemName: "film.fill")!,
+                icon: UIImage(systemName: "person.fill")!,
                 title: "",
                 height: 11
             ),
@@ -142,7 +142,7 @@ class SideMenuViewController: UIViewController {
                 type: "image",
                 icon: UIImage(named: "LogoEditoraColores")!,
                 title: "-",
-                height: 40
+                height: 54
             )
         ]
 
@@ -321,10 +321,6 @@ class SideMenuViewController: UIViewController {
             
             self.delegate?.selectedCell(indexPath.row)
             
-            // Remove highlighted color when you press the 'Profile' and 'Like us on facebook' cell
-            if indexPath.row == 4 || indexPath.row == 6 {
-                tableView.deselectRow(at: indexPath, animated: true)
-            }
         }
     }
 

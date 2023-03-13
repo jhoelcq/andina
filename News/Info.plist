@@ -8,6 +8,7 @@
 		<string>Roboto-Italic</string>
 		<string>Roboto-Regular</string>
 		<string>Roboto-Bold</string>
+		<string>Roboto-dos</string>
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
@@ -39,10 +40,10 @@
 			</array>
 		</dict>
 	</dict>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-       <key>NSAllowsArbitraryLoads</key>
-       <true/>
-    </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
