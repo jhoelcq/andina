@@ -145,27 +145,27 @@ extension MainViewController: SideMenuViewControllerDelegate {
     func selectedCell(_ row: Int) {
         switch row {
         case 0:
-            // Home
+            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "HomeNavID")
         case 1:
-            // Music
+            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "CategoryNavID")
         case 2:
-            // Movies
+            
             self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
-        /*
+        
         case 3:
-            // Books
-            self.showViewController(viewController: BooksViewController.self, storyboardId: "BooksVCID")
+            
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
         case 4:
-            // Profile
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let profileModalVC = storyboard.instantiateViewController(withIdentifier: "ProfileModalID") as? ProfileViewController
-            present(profileModalVC!, animated: true, completion: nil)
+            
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "MyNewsNavID")
         case 5:
-            // Settings
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "SettingsNavID")
-        case 6:
+            
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "GalleryNavID")
+        
+        /*
+             case 6:
             // Like us on facebook
             let safariVC = SFSafariViewController(url: URL(string: "https://www.facebook.com/johncodeos")!)
             present(safariVC, animated: true)
