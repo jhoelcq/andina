@@ -53,6 +53,10 @@ class VideosViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var containerInputSearch: UIView!
+    
+    @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
+    
     @IBOutlet weak var videosTableView: UITableView!
     @IBOutlet weak var containerView: UIView!
     
@@ -62,7 +66,9 @@ class VideosViewController: UIViewController {
       
         containerInputSearch.layer.cornerRadius = 20
         containerInputSearch.layer.masksToBounds = true
-         
+        micButton.setTitle("", for: .normal)        
+        
+        
         videosTableView.dataSource = self
         videosTableView.delegate = self
         

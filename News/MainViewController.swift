@@ -151,6 +151,9 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case 2:
             self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
         
+        case 4:
+            
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "MyNewsNavID")
         case 5:
             self.showViewController(viewController: UINavigationController.self, storyboardId: "LastedNavID")
         case 6:
@@ -180,6 +183,12 @@ extension MainViewController: SideMenuViewControllerDelegate {
             self.showViewController(viewController: UINavigationController.self, storyboardId: "VideosNavID")
             
         case 21:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "SearchNavID")
+            
+        case 22:
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "GalleryNavID")
+            
+        case 23:
             self.showViewController(viewController: UINavigationController.self, storyboardId: "SuggestNavID")
         
         /*
