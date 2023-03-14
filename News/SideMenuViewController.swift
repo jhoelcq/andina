@@ -143,7 +143,15 @@ class SideMenuViewController: UIViewController {
                 icon: UIImage(named: "LogoEditoraColores")!,
                 title: "-",
                 height: 54
-            )
+            ),
+            
+            SideMenuModel(
+                type: "simple",
+                icon: UIImage(systemName: "person.fill")!,
+                title: "SuggestNavID",
+                height: 34
+            ),
+            
         ]
 
         var delegate: SideMenuViewControllerDelegate?

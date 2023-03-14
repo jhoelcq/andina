@@ -64,8 +64,8 @@ class CategoriesViewController: UIViewController {
         // self.navigationController?.isNavigationBarHidden = true
         navigationItem.setHidesBackButton(true, animated: false)
         
-        sideMenuBtn.target = revealViewController()
-        sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
+        // sideMenuBtn.target = revealViewController()
+        // sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
         
         
         tableViewCategories.dataSource = self
@@ -91,6 +91,8 @@ class CategoriesViewController: UIViewController {
     }
     */
     
+    
+    /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.revealViewController()?.gestureEnabled = false
@@ -100,6 +102,7 @@ class CategoriesViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.revealViewController()?.gestureEnabled = true
     }
+     */
     
 
     @IBAction func goButtonAction(_ sender: Any) {

@@ -53,6 +53,9 @@
 		D874129729BC02F100A0D388 /* SideMenuSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D874129529BC02F100A0D388 /* SideMenuSimpleCell.swift */; };
 		D874129829BC02F100A0D388 /* SideMenuSimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D874129629BC02F100A0D388 /* SideMenuSimpleCell.xib */; };
 		D874129C29BFCCC100A0D388 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = D874129B29BFCCC100A0D388 /* Roboto */; };
+		D874129E29C0D1A500A0D388 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D874129D29C0D1A500A0D388 /* SuggestViewController.swift */; };
+		D87412A129C0D1C300A0D388 /* SuggestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D874129F29C0D1C300A0D388 /* SuggestTableViewCell.swift */; };
+		D87412A229C0D1C300A0D388 /* SuggestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87412A029C0D1C300A0D388 /* SuggestTableViewCell.xib */; };
 		D8C20000299C13CE000D78FC /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D8C2FFFF299C13CE000D78FC /* FirebaseInAppMessaging-Beta */; };
 		D8C20002299C13CF000D78FC /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D8C20001299C13CF000D78FC /* FirebaseInAppMessagingSwift-Beta */; };
 		D8C20004299C13D0000D78FC /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D8C20003299C13D0000D78FC /* FirebasePerformance */; };
@@ -151,6 +154,9 @@
 		D874129529BC02F100A0D388 /* SideMenuSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSimpleCell.swift; sourceTree = "<group>"; };
 		D874129629BC02F100A0D388 /* SideMenuSimpleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuSimpleCell.xib; sourceTree = "<group>"; };
 		D874129B29BFCCC100A0D388 /* Roboto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Roboto; sourceTree = SOURCE_ROOT; };
+		D874129D29C0D1A500A0D388 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
+		D874129F29C0D1C300A0D388 /* SuggestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestTableViewCell.swift; sourceTree = "<group>"; };
+		D87412A029C0D1C300A0D388 /* SuggestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestTableViewCell.xib; sourceTree = "<group>"; };
 		D8C2FFB3299AA3CA000D78FC /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2FFB6299AA3CA000D78FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2FFB8299AA3CA000D78FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -321,6 +327,9 @@
 				D874129629BC02F100A0D388 /* SideMenuSimpleCell.xib */,
 				0BCC56D229BB972F0015E4D4 /* GalleryTableViewCell.swift */,
 				0BCC56D329BB972F0015E4D4 /* GalleryTableViewCell.xib */,
+				D874129D29C0D1A500A0D388 /* SuggestViewController.swift */,
+				D874129F29C0D1C300A0D388 /* SuggestTableViewCell.swift */,
+				D87412A029C0D1C300A0D388 /* SuggestTableViewCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -489,6 +498,7 @@
 				D874129829BC02F100A0D388 /* SideMenuSimpleCell.xib in Resources */,
 				0B2E37F329BA84F80041C2E7 /* VideosTableViewCell.xib in Resources */,
 				D874128C29BBEC4400A0D388 /* SideMenuSpaceCell.xib in Resources */,
+				D87412A229C0D1C300A0D388 /* SuggestTableViewCell.xib in Resources */,
 				0BCC56CD29BB7BD40015E4D4 /* MyNewsTableViewCell.xib in Resources */,
 				0B4041EB29B7E81D004E757F /* GoogleService-Info.plist in Resources */,
 				D82A4ECB29B939AC002604ED /* LastedMainTableViewCell.xib in Resources */,
@@ -622,6 +632,7 @@
 				D8C2FFBB299AA3CA000D78FC /* AuthViewController.swift in Sources */,
 				0B2E37F529BA8ADD0041C2E7 /* VideoItem.swift in Sources */,
 				0BCC56CF29BB92DC0015E4D4 /* GalleryItem.swift in Sources */,
+				D87412A129C0D1C300A0D388 /* SuggestTableViewCell.swift in Sources */,
 				0BCC56C929BB78A40015E4D4 /* MyNewsViewController.swift in Sources */,
 				D84538EC29B7ECFF00F78E72 /* CategoriesViewController.swift in Sources */,
 				0B4041DE29B78437004E757F /* Session.swift in Sources */,
@@ -642,6 +653,7 @@
 				0B22B1D429BA2BFE002B6CA5 /* RelatedNewsTableViewCell.swift in Sources */,
 				D82A4EB729B8FA75002604ED /* CategoryMainTableViewCell.swift in Sources */,
 				0BCC56D429BB972F0015E4D4 /* GalleryTableViewCell.swift in Sources */,
+				D874129E29C0D1A500A0D388 /* SuggestViewController.swift in Sources */,
 				0B4041E929B7C563004E757F /* NewsItem.swift in Sources */,
 				0B2E37F229BA84F80041C2E7 /* VideosTableViewCell.swift in Sources */,
 				D874129329BBFA8300A0D388 /* SideMenuSectionCell.swift in Sources */,
